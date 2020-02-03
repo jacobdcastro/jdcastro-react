@@ -19,6 +19,7 @@ const blogPost = ({ path, data }) => {
     imageTitle,
     imageAlt,
     date,
+    tags,
   } = data.markdownRemark.frontmatter;
 
   // ? set SEO meta data depending on post type
@@ -68,17 +69,25 @@ const blogPost = ({ path, data }) => {
       <BlogPostPageWrapper>
         <h1>{title}</h1>
         <h2>{subtitle}</h2>
-        <p className="published">
+        <ul>
+          {tags &&
+            tags.map((tag, i) => (
+              <li className="listingTag" key={i}>
+                <h5>{tag}</h5>
+              </li>
+            ))}
+        </ul>
+        <span className="published">
           Published: <Moment date={date} format="MMM DD, YYYY" />
-        </p>
+        </span>
 
         {data.markdownRemark.timeToRead &&
           (type === 'tutorial' ? (
-            <p>
+            <span>
               Approx. {data.markdownRemark.timeToRead + 5} minutes to complete
-            </p>
+            </span>
           ) : (
-            <p>{data.markdownRemark.timeToRead} minute read</p>
+            <span>{data.markdownRemark.timeToRead} minute read</span>
           ))}
 
         <BlogAuthor />
