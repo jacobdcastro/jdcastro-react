@@ -12,7 +12,7 @@ tags:
   - how-to
   - css
   - react
-type: "tutorial"
+type: "blogPost"
 ---
 
 I've been rewriting my website recently. And if you read my [last blog post], you'll see why.
