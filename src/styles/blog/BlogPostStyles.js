@@ -8,13 +8,33 @@ const BlogPostPageWrapper = styled.div`
 
   h1 {
     font-size: 3rem;
+    margin-bottom: 14px;
   }
   h2 {
     font-size: 1.7rem;
-    margin: 10px 0;
+    margin: 10px 0 18px;
   }
+
+  ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    height: auto;
+
+    .listingTag {
+      margin: 0 8px 5px 0;
+      font-size: 0.8rem;
+
+      h5 {
+        color: ${props => props.theme.accentColor};
+      }
+    }
+  }
+
   .published {
     margin-bottom: 3px;
+    margin-right: 30px;
   }
 
   .author {
@@ -34,7 +54,6 @@ const BlogPostPageWrapper = styled.div`
       height: auto;
     }
     h3 {
-
       margin: 0 0 10px;
     }
     p {
