@@ -10,8 +10,25 @@ Blog posts edits (typos, code snippets, content embeds, etc.) will be included i
 - Netlify functions to use with Mailchimp API.
 - "Talks" page featuring past/future public speaking gigs
 - Netlify functions for contact form
-- "Work" page for portfolio
 - Jest tests
+
+## [3.0.0] - 2020-01-23
+
+### Added
+
+- Portfolio (work section)
+- Blog post tags to title section
+- Shape specification to component prop type checking
+- Filters via tags in blog
+
+### Changed
+
+- React context providers in own directory
+- Blog posts are stored as own directories with images and content together
+
+### Removed
+
+- Tutorials section of site
 
 ## [2.3.5] - 2020-01-23
 
