@@ -21,48 +21,26 @@ const blogPost = ({ path, data }) => {
     date,
     tags,
   } = data.markdownRemark.frontmatter;
+  console.log(data);
 
-  // ? set SEO meta data depending on post type
-  let seo;
-  if (type === 'blogPost') {
-    seo = {
-      page: `${type}`,
-      title: `${title}`,
-      description: `${data.markdownRemark.excerpt}`,
-      url: `https://jacobdcastro.com/${slug}`,
-      imgUrl: `${data.file.publicURL}`,
-      imgAlt: `${data.file.imageAlt}`,
-      breadcrumbs: [
-        {
-          name: 'Blog',
-          path: '/blog',
-        },
-        {
-          name: `${title}`,
-          path: `/blog/${slug}`,
-        },
-      ],
-    };
-  } else if (type === 'tutorial') {
-    seo = {
-      page: `${type}`,
-      title: `${title}`,
-      description: `${data.markdownRemark.excerpt}`,
-      url: `https://jacobdcastro.com/${slug}`,
-      imgUrl: `${data.file.publicURL}`,
-      imgAlt: `${data.file.imageAlt}`,
-      breadcrumbs: [
-        {
-          name: 'Tutorials',
-          path: '/tutorials',
-        },
-        {
-          name: `${title}`,
-          path: `/tutorials/${slug}`,
-        },
-      ],
-    };
-  }
+  const seo = {
+    page: `${type}`,
+    title: `${title}`,
+    description: `${data.markdownRemark.excerpt}`,
+    url: `https://jacobdcastro.com/${slug}`,
+    imgUrl: `${data.file.publicURL}`,
+    imgAlt: `${data.file.imageAlt}`,
+    breadcrumbs: [
+      {
+        name: 'Blog',
+        path: '/blog',
+      },
+      {
+        name: `${title}`,
+        path: `/blog/${slug}`,
+      },
+    ],
+  };
 
   return (
     <Layout seo={seo} path={path} style={{ textAlign: 'left' }}>

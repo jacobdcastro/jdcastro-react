@@ -5,10 +5,7 @@ module.exports = {
     title: 'Jacob D. Castro',
     siteUrl: 'https://jacobdcastro.com',
   },
-
   pathPrefix: '/blog',
-  pathPrefix: '/tutorials',
-
   plugins: [
     {
       resolve: 'gatsby-plugin-manifest',
