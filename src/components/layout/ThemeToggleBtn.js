@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { ThemeContext } from '../../utils/ThemeContext';
+import { ThemeContext } from '../../utils/context';
 import lightbulbIcon from '../../images/lightbulb.svg';
 
 // TODO write test for theme toggle functionality

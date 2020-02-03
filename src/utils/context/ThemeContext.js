@@ -1,11 +1,6 @@
 import React from 'react';
-import { lightTheme, darkTheme } from '../styles/layout/__themes';
-
-const ThemeContext = React.createContext({
-  lightTheme,
-  transition: '0.5s',
-  toggleTheme: () => {},
-});
+import { lightTheme, darkTheme } from '../../styles/layout/__themes';
+import { ThemeContext } from './index';
 
 // ? provider component wraps entire app in gatsby-browser.js
 class ThemeContextWrapper extends React.Component {
@@ -49,4 +44,3 @@ class ThemeContextWrapper extends React.Component {
 }
 
 export default ThemeContextWrapper;
-export { ThemeContext };

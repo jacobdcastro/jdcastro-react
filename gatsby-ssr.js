@@ -1,7 +1,13 @@
 import React from 'react';
-import ThemeContextWrapper from './src/utils/ThemeContext';
+import ThemeContextWrapper from './src/utils/context/ThemeContext';
+import FilterContextWrapper from './src/utils/context/FiltersContext';
 
-// provide theme state to entire app
+// provide contexts to entire app
 export const wrapRootElement = ({ element }) => (
-  <ThemeContextWrapper>{element}</ThemeContextWrapper>
+  <ThemeContextWrapper>
+    <FilterContextWrapper>{element}</FilterContextWrapper>
+  </ThemeContextWrapper>
 );
+
+// ? primsjs stuff
+require('prismjs/themes/prism-tomorrow.css');

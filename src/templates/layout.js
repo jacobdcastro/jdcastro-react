@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from 'react';
-import { ThemeContext } from '../utils/ThemeContext';
+import { ThemeContext } from '../utils/context';
 import { ThemeProvider } from 'styled-components';
 import Head from '../utils/Helmet';
 import PropTypes from 'prop-types';
