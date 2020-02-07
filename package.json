@@ -61,7 +61,7 @@
     "smooth-scroll": "^16.1.2",
     "styled-components": "^4.4.1",
     "typography": "^0.16.18",
-    "webpack-dev-server": "^3.10.2"
+    "webpack-dev-server": "^3.10.3"
   },
   "devDependencies": {
     "@testing-library/react": "^9.4.0",
