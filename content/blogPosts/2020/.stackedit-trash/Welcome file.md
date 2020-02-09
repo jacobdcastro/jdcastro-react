@@ -1,149 +1,152 @@
-# Welcome to StackEdit!
+---
 
-Hi! I'm your first Markdown file in **StackEdit**. If you want to learn about StackEdit, you can read me. If you want to play with Markdown, you can edit me. Once you have finished with me, you can create new files by opening the **file explorer** on the left corner of the navigation bar.
+slug: "creating-my-first-full-stack-app-from-scratch-part-1"
 
+title: "Creating My First Full Stack App From Scratch (Part 1)"
 
-# Files
-```javascript
-const hello = world();
-```
+subtitle: "Moving from primarily-frontend to building an API alongside a single-page React app opened up my world."
 
-StackEdit stores your files in your browser, which means all your files are automatically saved locally and are accessible **offline!**
+image: "gamenightscore-screenshot.png"
 
-## Create files and folders
+imageTitle: "GamenightScore Lobby"
 
-The file explorer is accessible using the button in left corner of the navigation bar. You can create a new file by clicking the **New file** button in the file explorer. You can also create folders by clicking the **New folder** button.
+imageAlt: "screenshot of gamenightscore app with player's scores"
 
-## Switch to another file
+date: "2019-11-09T00:00:00-07:00"
 
-All your files and folders are presented as a tree in the file explorer. You can switch from one to another by clicking a file in the tree.
+tags:
 
-## Rename a file
+- "react"
 
-You can rename the current file by clicking the file name in the navigation bar or by clicking the **Rename** button in the file explorer.
+- "nodejs"
 
-## Delete a file
+- "express"
 
-You can delete the current file by clicking the **Remove** button in the file explorer. The file will be moved into the **Trash** folder and automatically deleted after 7 days of inactivity.
+- "mongodb"
 
-## Export a file
+- "fullstack"
 
-You can export the current file by clicking **Export to disk** in the menu. You can choose to export the file as plain Markdown, as HTML using a Handlebars template or as a PDF.
+- "mern"
 
+type: "blogPost"
 
-# Synchronization
+---
 
-Synchronization is one of the biggest features of StackEdit. It enables you to synchronize any file in your workspace with other files stored in your **Google Drive**, your **Dropbox** and your **GitHub** accounts. This allows you to keep writing on other devices, collaborate with people you share the file with, integrate easily into your workflow... The synchronization mechanism takes place every minute in the background, downloading, merging, and uploading file modifications.
+  
 
-There are two types of synchronization and they can complement each other:
+Early on in my web development journey, I decided I wanted to get into full-stack development. I didn't really know any ways of practicing full-stack development though. It's easy to replicate a static site and practice frontend dev. But as soon as I felt ready to start learning backend, I felt a little lost on where to begin.So I pretty much stuck to frontend dev with a very (very) basic understanding of Nodejs/Express thanks to some Treehouse courses.
 
-- The workspace synchronization will sync all your files, folders and settings automatically. This will allow you to fetch your workspace on any other device.
-	> To start syncing your workspace, just sign in with Google in the menu.
+  
 
-- The file synchronization will keep one file of the workspace synced with one or multiple files in **Google Drive**, **Dropbox** or **GitHub**.
-	> Before starting to sync files, you must link an account in the **Synchronize** sub-menu.
+But earlier this summer, I decided to dive into a MERN stack course on [Udemy](https://udemy.com/). It covered building a [Node](https://nodejs.org/) server with [Express](https://expressjs.com/), connecting it to [MongoDB](https://www.mongodb.com/) through [Mongoose](https://mongoosejs.com/), and developing a [React](https://reactjs.org/) frontend using [Redux](https://react-redux.js.org/) to manage the app's state. It was the full deal.
 
-## Open a file
+  
 
-You can open a file from **Google Drive**, **Dropbox** or **GitHub** by opening the **Synchronize** sub-menu and clicking **Open from**. Once opened in the workspace, any modification in the file will be automatically synced.
+And let me tell you, I had so much fun! Just to build a server that was intended to be used by an actual client, one I would end up developing as well, lead me to have the most fun coding I'd have in a long time.
 
-## Save a file
+  
 
-You can save any file of the workspace to **Google Drive**, **Dropbox** or **GitHub** by opening the **Synchronize** sub-menu and clicking **Save on**. Even if a file in the workspace is already synced, you can save it to another location. StackEdit can sync one file with multiple locations and accounts.
+It wasn't that I didn't love frontend anymore. Nor was it that I enjoyed backend _more_ than frontend... I found that I enjoyed _all_ of web development significantly more now that I had an understanding of server-side code.
 
-## Synchronize a file
+  
 
-Once your file is linked to a synchronized location, StackEdit will periodically synchronize it by downloading/uploading any modification. A merge will be performed if necessary and conflicts will be resolved.
+For the record, I did seriously love developing a server with Nodejs/Express. And I enjoy React now more than ever thanks to simple experience and learning better practices.
 
-If you just have modified your file and you want to force syncing, click the **Synchronize now** button in the navigation bar.
+  
 
-> **Note:** The **Synchronize now** button is disabled if you have no file to synchronize.
+## Birth of the Idea
 
-## Manage file synchronization
+  
 
-Since one file can be synced with multiple locations, you can list and manage synchronized locations by clicking **File synchronization** in the **Synchronize** sub-menu. This allows you to list and remove synchronized locations that are linked to your file.
+After getting through most of the MERN stack course I finally decided to start developing a project idea I thought of earlier this year. The idea was not only well within reach for accomplishment (or so I thought), but also was a real itch-scratcher for an actual problem I was having. The app would be used to keep score for the card game called Dutch Blitz, which my friends and I play a lot.
 
+  
 
-# Publication
+### The problem
 
-Publishing in StackEdit makes it simple for you to publish online your files. Once you're happy with a file, you can publish it to different hosting platforms like **Blogger**, **Dropbox**, **Gist**, **GitHub**, **Google Drive**, **WordPress** and **Zendesk**. With [Handlebars templates](http://handlebarsjs.com/), you have full control over what you export.
+  
 
-> Before starting to publish, you must link an account in the **Publish** sub-menu.
+Dutch Blitz is a card game that is not turn-based. On 'go', everyone begins playing cards in the center of the table and the first to get rid of their stack of cards wins. Everyone's final scores are the sum of a positive and negative number. So some rounds you end above zero, and other worse rounds you may end with a negative score. So math is involved to get your round score.
 
-## Publish a File
+  
 
-You can publish your file by opening the **Publish** sub-menu and by clicking **Publish to**. For some locations, you can choose between the following formats:
+The fun part about this game is your score accumulates and adds to your previous rounds' scores. So if in your first three rounds, your scores were 15, -7, and 4, your total score is 12. After 10+ rounds, mental math gets tiring and having one person trying to take and add everyone's score is slow and repetitive.
 
-- Markdown: publish the Markdown text on a website that can interpret it (**GitHub** for instance),
-- HTML: publish the file converted to HTML via a Handlebars template (on a blog for example).
+  
 
-## Update a publication
+### The Solution
 
-After publishing, StackEdit keeps your file linked to that publication which makes it easy for you to re-publish it. Once you have modified your file and you want to update your publication, click on the **Publish now** button in the navigation bar.
+  
 
-> **Note:** The **Publish now** button is disabled if your file has not been published yet.
+So I wanted to make a scorekeeper web app where everyone on their own devices can join a live game server and enter their scores in the app. Then the app would update on everyone else's devices to show each player's score as they were being submitted. It would also be fun to see other game stats that normally wouldn't be tracked because it's too much manual effort on a piece of paper.
 
-## Manage file publication
+  
 
-Since one file can be published to multiple locations, you can list and manage publish locations by clicking **File publication** in the **Publish** sub-menu. This allows you to list and remove publication locations that are linked to your file.
+I shall call it **GamenightScore**. Literally why not. Better than "dUtCh bLiTz sCoReKeEpEr aPp".
 
+  
 
-# Markdown extensions
+## Starting Backend Development
 
-StackEdit extends the standard Markdown syntax by adding extra **Markdown extensions**, providing you with some nice features.
+  
 
-> **ProTip:** You can disable any **Markdown extension** in the **File properties** dialog.
+I would follow a very similar model to that of the course I took on Udemy. To no one's surprise, this web app will also be a MERN app!
 
+  
 
-## SmartyPants
+So I installed all of the initial NPM packages I knew I'd needed to build the server and, after a bit of basic app planning, got to work!
 
-SmartyPants converts ASCII punctuation characters into "smart" typographic punctuation HTML entities. For example:
+  
 
-|                |ASCII                          |HTML                         |
-|----------------|-------------------------------|-----------------------------|
-|Single backticks|`'Isn't this fun?'`            |'Isn't this fun?'            |
-|Quotes          |`"Isn't this fun?"`            |"Isn't this fun?"            |
-|Dashes          |`-- is en-dash, --- is em-dash`|-- is en-dash, --- is em-dash|
+I began creating the document models for MongoDB and the structure for which the game data would be stored. It included the main 'Game' document, with 'Player' and 'Round' subdocuments. Those had basic game data such the game title and password, the arrays of rounds and players, player data like name and round scores, and lots more (details to this will be covered in-depth in a future blog post).
 
+  
 
-## KaTeX
+I knew I'd probably be adding more data as I began to develop this app, but once the models were at a good starting point, I began writing all the API endpoints for functions I knew the app would need. Such as creating a game, joining a game, starting a new round, submitting a player's score, etc.
 
-You can render LaTeX mathematical expressions using [KaTeX](https://khan.github.io/KaTeX/):
+  
 
-The *Gamma function* satisfying $\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N$ is via the Euler integral
+I was so hopeful, excited, and ready to step foot into some new concepts!
 
-$$
-\Gamma(z) = \int_0^\infty t^{z-1}e^{-t}dt\,.
-$$
+  
 
-> You can find more information about **LaTeX** mathematical expressions [here](http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference).
+At least at first.
 
+  
 
-## UML diagrams
+## Facing Giants
 
-You can render UML diagrams using [Mermaid](https://mermaidjs.github.io/). For example, this will produce a sequence diagram:
+  
 
-```mermaid
-sequenceDiagram
-Alice ->> Bob: Hello Bob, how are you?
-Bob-->>John: How about you John?
-Bob--x Alice: I am good thanks!
-Bob-x John: I am good thanks!
-Note right of John: Bob thinks a long<br/>long time, so long<br/>that the text does<br/>not fit on a row.
+Pretty much immediately, I began to grow more and more intimidated. Through some development of a few endpoints, I realized I may have bit off more than I can chew with this project. I was testing the API with [Postman](https://www.getpostman.com/) and pretending to go through playing a game through the Postman UI. But so many problems were being exposed!
 
-Bob-->Alice: Checking with John...
-Alice->John: Yes... John, how are you?
-```
+  
 
-And this will produce a flow chart:
+I know that's a good thing. But at first, I was so overwhelmed. I realized I had to rearrange some of the models' data structures which took some playing around with, I had to add more endpoints to handle other functions I hadn't thought about, and I just had to rethink the entire round-to-round lifecycle that would keep the app going through a game of Dutch Blitz.
 
-```mermaid
-graph LR
-A[Square Rect] -- Link text --> B((Circle))
-A --> C(Round Rect)
-B --> D{Rhombus}
-C --> D
-```
+  
+
+Despite feeling absolutely overwhelmed by all of these unexpected issues, I was having weird feelings... Conflicting feelings... One could describe them as.... Exhilirating. Adrenaline-inducing. Possibly even... **Fun**.
+
+  
+
+I honestly enjoyed every second of the setbacks. I was determined beyond explanation. I did what I had to do. I soon saw broken lines of code finally work, and MongoDB was being populated with proper data! It was finally working out well, even though I had to rewrite a lot of code.
+
+  
+
+By far the biggest obstacle was trying to clean up a lack of planning the server. I wouldn't have even known how to "plan" the development of this server before just... doing it. But I got over it. And it was finally time to whip up the frontend!
+
+  
+
+Feel free to check out the live project at this [randomly generated Heroku URL](https://howling-nightmare-39429.herokuapp.com/) or peek into the [repo on Github](https://github.com/jacobdcastro/gamenightscore)!
+
+  
+
+In the next blog post, I'll tell my story of developing the React app and some of the hardships I faced there. Follow me on Twitter ([@jacobdcastro](https://twitter.com/jacobdcastro/)) and look out for the announcement of the next blog posts! In the next two parts to this, I'll be talking about my journey on the frontend, and then a more in-depth look into the code base and how the app works technically.
+
+  
+
+Thanks for reading!!!
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYwMjkyOTU4Nl19
+eyJoaXN0b3J5IjpbMjAwMjY0MjE1MiwxNjAyOTI5NTg2XX0=
 -->
