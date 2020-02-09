@@ -1,7 +1,7 @@
 ---
 slug: "how-audio-engineering-helped-me-learn-web-development"
 title: "How Audio Engineering Helped Me Learn Web Development"
-subtitle: "Running cables, testing mics, and adjusting equalizers really helped in my understanding of Javascript."
+subtitle: "Running cables, testing mics, and adjusting equalizers really helped in my understanding of JavaScript."
 image: "kaleidico-26MJGnCM0Wc-unsplash.jpg"
 imageTitle: "Whiteboard"
 imageAlt: "Two designers writing on whiteboard. Photo by Kaleidico on Unsplash"
@@ -42,7 +42,7 @@ So there left me. A 15 year old kid, about a month into doing sound; I'm the onl
 
 I had no idea what I was doing.
 
-So I ended up doing a bunch of self-learning through Youtube videos, playing around with DAW software ([Reason](https://www.reasonstudios.com/) 7 at the time), and spent tons of extra hours at my church to really dial in details with sound and learn their system.
+So I ended up doing a bunch of self-learning through YouTube videos, playing around with DAW software ([Reason](https://www.reasonstudios.com/) 7 at the time), and spent tons of extra hours at my church to really dial in details with sound and learn their system.
 
 Then, about a year later, they announced they would be moving from a dedicated building where the sound system was set up 24/7, to a high school auditorium. This meant we would have to unload a trailer with **all** of our audio equipment, set it up early in the morning, use it for one church service, dismantle the entire system, store it away in said trailer, and repeat. Every single week.
 
@@ -84,7 +84,7 @@ I had an interest in STEM subjects. And I thought coding sounded pretty cool. So
 
 It was actually super fun and taught me a lot about programming concepts. But after seeing the future curriculum for the CS degree, it was leading me toward a path I wasn't interested in. I wanted to learn programming for the web, not... data and analytics.
 
-Naturally, I jumped on Google and searched things like "how to learn web development" and "html and css tutorials". It was really no different than having to learn audio engineering, minus the percieved church-wide pressure.
+Naturally, I jumped on Google and searched things like "how to learn web development" and "HTML and CSS tutorials". It was really no different than having to learn audio engineering, minus the perceived church-wide pressure.
 
 I came across an online tech learning platform, [Treehouse](https://teamtreehouse.com/), and began learning frontend web development on the evenings, and in between classes. I would do so in the student computer center, since I didn't have my own laptop, hoping 1 of the 4 Macs were available. One usually was and I had so much fun learning frontend development!
 
