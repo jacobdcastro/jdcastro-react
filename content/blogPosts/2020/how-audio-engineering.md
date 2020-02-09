@@ -26,11 +26,7 @@ Economics in high school exposed me to the world of the stock market. I actually
 
 I've also always loved science and eventually dove deep into astronomy and theoretical astrophysics.
 
-  
-
 This was all for fun... I had a very wide range of interests.
-
-  
 
 One of my favorite hobbies was (and still is) music. This lead me to become the 'sound guy' at the local church I attended.
 
@@ -38,75 +34,40 @@ One of my favorite hobbies was (and still is) music. This lead me to become the 
 
 ## Deep Dive Into The Audio World
 
-  
-
 To this day, I still enjoy playing around with friends recording some song covers, or even original song ideas. I still occasionally run the soundboard at my current local church. But it wasn't always so easy.
-
-  
 
 I am 90% self-taught in my audio skills. I started 7 years ago when I was 15 years old. And when I say it was a deep dive, it was a serious **deep dive**.
 
-  
-
 I had someone more experienced show me around during my first few weeks. Then he had a kid soon after and took a break from being involved with sound, rightfully so. The other sound guy was moving away at the same time.
-
-  
 
 So there left me. A 15 year old kid, about a month into doing sound; I'm the only person in the whole church who was available to run sound now.
 
-  
-
 I had no idea what I was doing.
-
-  
 
 So I ended up doing a bunch of self-learning through Youtube videos, playing around with DAW software ([Reason](https://www.reasonstudios.com/) 7 at the time), and spent tons of extra hours at my church to really dial in details with sound and learn their system.
 
-  
-
 Then, about a year later, they announced they would be moving from a dedicated building where the sound system was set up 24/7, to a high school auditorium. This meant we would have to unload a trailer with **all** of our audio equipment, set it up early in the morning, use it for one church service, dismantle the entire system, store it away in said trailer, and repeat. Every single week.
-
-  
 
 I was terrified, as I was the only dedicated sound guy at the church.
 
-  
-
 Then, one day, came the magic question:
-
-  
 
 "Can you design the new sound system for us?"
 
-  
-
 _Well, here we go..._
 
-  
-
+ 
 ## My Most Valuable Lesson
-
-  
 
 One day, I was learning what a certain knob or switch does, and how to take out a little bit of feedback from a problematic microphone.
 
-  
-
 The next day, I needed to learn what an entire sound system even needs for it work, how to dismantle and rebuild it, dealing with proper acoustics configuration for a new building with zero sound dampening (it was a very echo-y auditorium), and what type of equipment is best suited to take such an "on-the-road" beating.
-
-  
 
 This practically became my first job. People make livings with what I learned to do, and I was pretty much paid in coffee. Still grateful for that though, not gonna lie... I needed it for the 5:30am Sunday mornings.
 
-  
-
 Earlier, I mentioned I am 90% self-taught with my audio skills. I did have an occasional mentor to help me out and teach me some things if/when he was in town. He spent most of his time on tour doing this stuff for a living. Shoutout to Ryan for the help.
 
-  
-
 When it came to learning everything else when Ryan wasn't in town, I opted for self-guided learning. It was literally my only option.
-
-  
 
 Aside from learning all the technical aspects of designing, building, and maintianing a sound system, I learned a super valuable lesson.
 
@@ -242,5 +203,5 @@ Recap time: guitar => pedal => pedal => pedal => amp => microphone => snake => s
 
 I absolutely love React. Despite having a tough time with it at first (as it was my first framework), I really got the hang of it with the help of my new visualization system.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk3Nzg5MjcxNV19
+eyJoaXN0b3J5IjpbMTIwMjg4MDY5M119
 -->
