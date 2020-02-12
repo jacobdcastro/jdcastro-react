@@ -23,7 +23,7 @@ _Hmm, weird. Login failed._
 
 _Let me try again..._
 
-![Error notification: Your account has been disabled for violating our terms. Learn how you may be able to restore your account.](https://jacobdcastro.com/content/images/getting-my-deactivated-instagram-account-back/instagram-disable-notification.png "Instagram account disabled notification")
+![Error notification: Your account has been disabled for violating our terms. Learn how you may be able to restore your account.](./instagram-disable-notification.png "Instagram account disabled notification")
 
 This really really really sucked. Like, really sucked. Not because I was gonna lose all my followers. Not because I won't be able to recover cool memories I had in my story highlights and posts.
 

@@ -12,9 +12,9 @@ tags:
 type: "blogPost"
 ---
 
-In the last 3-4 months, I've dedicated myself to learning React. I've been on Javascript for the last year or so and decided it was time to learn a framework/library to expand my Javascript skills. Javascript always excited me. And hearing a lot about frameworks such as Angular, React, Vue, and, formerly, Ember, made me super curious about what they were and why I would need to use one.
+In the last 3-4 months, I've dedicated myself to learning React. I've been on JavaScript for the last year or so and decided it was time to learn a framework/library to expand my JavaScript skills. JavaScript always excited me. And hearing a lot about frameworks such as Angular, React, Vue, and, formerly, Ember, made me super curious about what they were and why I would need to use one.
 
-After exploring the massive Javascript world, I made my decision on React. It seemed the most promising and it looked like it had a bright, long future that could help kick off my career in web development. But I soon had a slightly scary realization: the React ecosystem is gigantic in itself. There were extensions and libraries and frameworks for React that made it all seem so intense.
+After exploring the massive JavaScript world, I made my decision on React. It seemed the most promising and it looked like it had a bright, long future that could help kick off my career in web development. But I soon had a slightly scary realization: the React ecosystem is gigantic in itself. There were extensions and libraries and frameworks for React that made it all seem so intense.
 
 I pushed all of the React craze aside and started with the React Basics course on Treehouse. My first React environment I learned was Create React App. It was an awesome experience!! I really loved React and it actually really made sense to me. I caught on pretty quickly!
 
@@ -46,7 +46,7 @@ I knew I wouldn't be making this blog to be perfect on the first try. It'll be a
 
 I started by making the blog home page and that was pretty simple and straight forward. The more difficult part was making the pages for each blog post. The Gatsby Node API `createPages` made it super easy!
 
-I started by following along with a tutorial on Youtube explaining how to use Contentful with Gatsby. After that tutorial, I really began to understand Gatsby. This is what I finished in my `gatsby-node.js` file:
+I started by following along with a tutorial on YouTube explaining how to use Contentful with Gatsby. After that tutorial, I really began to understand Gatsby. This is what I finished in my `gatsby-node.js` file:
 
 ```javascript
 const path = require("path");
@@ -89,7 +89,7 @@ exports.createPages = ({ graphql, actions }) => {
 };
 ```
 
-Creating the pages is super easy with the `createPages` Gatsby API. Not to mention, Contentful can automatically generate a slug for the URL. On my project, I have the slugs set to be the title of the blog post. For example, a blog post titled "Hello World In Javascript" would have its own page at jacobdcastro.com/blog/hello-world-in-javascript/. These tools make it so easy!
+Creating the pages is super easy with the `createPages` Gatsby API. Not to mention, Contentful can automatically generate a slug for the URL. On my project, I have the slugs set to be the title of the blog post. For example, a blog post titled "Hello World In JavaScript" would have its own page at jacobdcastro.com/blog/hello-world-in-javascript/. These tools make it so easy!
 
 Once the pages are created behind the scenes in Gatsby, it uses a template to generate the markup for each page. So each blog post page is based on the same template. I love reusing code.
 

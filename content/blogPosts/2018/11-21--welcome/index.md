@@ -20,7 +20,7 @@ This past year or so, I've really grown a lot as a beginning developer. I began 
 
 Then I took a break - a pretty long one. After completing my first and only year at community college in 2016, I moved to Redding, CA for a year to attend a ministry school. It was one of the most amazing years of my life. Then in May of 2017, I moved back home, but at this point I was really lacking short-term vision and goals for my life.
 
-Naturally, I decided to fall back to what I had already started: web development. I re-subscribed to Treehouse and went all-in. I haven't regretted that for a moment. And now I'm here, building my own blog instead of letting Wordpress do it for me!
+Naturally, I decided to fall back to what I had already started: web development. I re-subscribed to Treehouse and went all-in. I haven't regretted that for a moment. And now I'm here, building my own blog instead of letting WordPress do it for me!
 
 Through my journey thus far, I've realized how valuable documenting everything would have been early-on (even though I'd say I'm still extremely early in my journey). So this is where I'm starting.
 
