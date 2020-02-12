@@ -2,7 +2,7 @@ import { createContext } from 'react';
 import { lightTheme } from '../../styles/layout/__themes';
 
 export const ThemeContext = createContext({
-  lightTheme,
+  currentTheme: lightTheme,
   transition: '0.5s',
   toggleTheme: () => {},
 });
