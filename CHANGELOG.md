@@ -14,6 +14,7 @@ Blog posts edits (typos, code snippets, content embeds, etc.) will be included i
 
 ### Added
 
+- Custom start scripts with [`gatsby-cli` flags](https://www.gatsbyjs.org/docs/gatsby-cli/#develop)
 - Portfolio (work section)
 - Blog post tags to title section
 - Shape specification to component prop type checking
