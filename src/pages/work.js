@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import Layout from '../templates/layout';
+import WorkListing from '../components/work/WorkListing';
 import WorkPageWrapper from '../styles/work/WorkPageStyles';
 
 const Work = ({ path, data }) => {
@@ -26,7 +27,7 @@ const Work = ({ path, data }) => {
     <Layout seo={seo} path={path}>
       <WorkPageWrapper>
         <h1>Work</h1>
-
+        <WorkListing />
         {/* map a list of projects */}
       </WorkPageWrapper>
     </Layout>

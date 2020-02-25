@@ -1,5 +1,19 @@
 import styled from 'styled-components';
 
-const WorkPageWrapper = styled.div``;
+const WorkPageStyles = styled.div`
+  margin-top: 80px;
+  width: 100%;
+  transition: ${props => props.theme.transition};
+  background-color: ${props => props.theme.bgColor};
+  min-height: 80vh;
 
-export default WorkPageWrapper;
+  h1 {
+    font-size: 2.7rem;
+  }
+
+  .workListing {
+    color: ${props => props.theme.textColor};
+  }
+`;
+
+export default WorkPageStyles;
