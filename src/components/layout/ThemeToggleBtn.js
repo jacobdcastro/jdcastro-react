@@ -6,8 +6,6 @@ import lightbulbIcon from '../../images/lightbulb.svg';
 
 const ThemeToggleBtn = () => {
   const themeData = useContext(ThemeContext);
-  console.log(themeData);
-
   return (
     <button
       id="themeToggleBtn"

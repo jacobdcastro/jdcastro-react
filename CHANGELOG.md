@@ -20,6 +20,7 @@ Blog posts edits (typos, code snippets, content embeds, etc.) will be included i
 - Shape specification to component prop type checking
 - Filters via tags on blog and home page
 - Email newsletter subscription form
+- Dark/light theme feature to change based on time of day (light theme during daytime, dark theme during nighttime)
 
 ### Changed
 
