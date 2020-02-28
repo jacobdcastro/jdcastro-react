@@ -100,7 +100,7 @@ blogPost.propTypes = {
 export default blogPost;
 
 export const BLOG_POST_QUERY = graphql`
-  query($slug: String!, $imgUrl: String) {
+  query BLOG_POST_QUERY($slug: String!, $imgUrl: String) {
     markdownRemark(frontmatter: { slug: { eq: $slug } }) {
       id
       html
