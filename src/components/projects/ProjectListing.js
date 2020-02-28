@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const WorkListing = () => {
+const ProjectListing = () => {
   return (
-    <div className="workListing">
+    <div className="projectListing">
       <h2>Jamersan LLC. Website</h2>
       <h3>Stack</h3>
       <ul>
@@ -17,8 +17,8 @@ const WorkListing = () => {
   );
 };
 
-WorkListing.propTypes = {
+ProjectListing.propTypes = {
   data: PropTypes.object.isRequired,
 };
 
-export default WorkListing;
+export default ProjectListing;

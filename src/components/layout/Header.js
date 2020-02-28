@@ -40,8 +40,8 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link activeClassName="activePage" to="/work">
-                Work
+              <Link activeClassName="activePage" to="/projects">
+                Projects
               </Link>
             </li>
             <li>
