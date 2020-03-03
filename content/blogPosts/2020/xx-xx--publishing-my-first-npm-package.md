@@ -54,14 +54,103 @@ I came to this after a bunch of tinkering. But finally, things were beginning to
 
 But then I realized I had a sibling AND parent component that needed the same logic. Three separate components needed access to a live-updating window width value. So I was faced with a couple of options.
 
-#### Idea #1
+### Idea #1
 
 My first thought was to use the Context API. I've used it before and it made sense. Wrap the entire app in a component that handles the logic I just wrote, then passes the value to a context provider where I can then access the window width value from any component.
 
 _this just seems so 2018... there has to be a better way_
 
-#### Idea #2
+### Idea #2
 
 _OH WAIT, can't you write custom hooks? Let's read the docs._
 
-I'd never written my own hook but I know that it's been done before. So I read all about how to write custom hooks on the React documentation. And the more I read about the 'how', the more I was convinced that hooks were the way to go.
+I'd never written my own hook but I know that it can be done. So I read the [React documentation that covers how to do it](https://reactjs.org/docs/hooks-custom.html). And the more I understood the 'how', the more I was convinced that custom hooks were the way to go.
+
+Idea #2 it is!
+
+## Moving the Logic to a Hook
+
+I first created a new file called `useWindowWidth.js` and threw an arrow function in there called... You guessed it: `useWindowWidth()`.
+
+Mirroring the original component, in the new function, I placed a `useState()` to store the current value of `window.innerWidth` and `useEffect()` to store the initial width, then add the event listener upon mounting the component.
+
+Additionally, I added a `removeEventListener` method when the component dismounts via the return statement in `useEffect()`. There's no need to keep listening for the window width when you don't need it!
+
+Since this module is specific to browser windows, there's no need to add `window.addEventListener` when the `window` object doesn't even exist (in the case of server-side rendering, etc.). So I added an `if` statement to check if the window exists before adding the listeners.
+
+The final `useWindowWidth()` custom hook ended up looking like this:
+
+```javascript
+import * as React from "react";
+
+// custom hook
+const useWindowWidth = () => {
+  const [width, setWidth] = React.useState(null);
+
+  // sets width when window is resized (from event listener)
+  const handleWindowResize = () => setWidth(window.innerWidth);
+
+  React.useEffect(() => {
+    // only runs if in browser
+    if (typeof window !== "undefined") {
+      setWidth(window.innerWidth); // sets initial width
+      window.addEventListener("resize", handleWindowResize, true);
+
+      return () => {
+        window.removeEventListener("resize", handleWindowResize, true);
+      };
+    }
+  }, []);
+
+  // if width is null, return 0 to prevent prop-type errors
+  return width ? width : 0;
+};
+
+export default useWindowWidth;
+```
+
+I also wanted to add a hook to calculate the `window.innerHeight` in case it was ever needed. It was as easy as making a new file, and adding all of the previous code and changing every word "width" to "height". Boom, `useHeight()` was created.
+
+## Implementation
+
+It was officially time to use the hook in my component! Remember the original component I created? After importing `useWindowWidth`, it went from this...
+
+```javascript
+const MyComponent = () => {
+	const [width, setWidth] = useState(null);
+	const handleResize = () => setWidth(window.innerWidth);
+
+	useEffect(() => {
+		if (typeof window !== 'undefined') {
+			setWidth(window.innerWidth);
+			window.addEventListener('resize', handleResize);
+			return () => {
+				window.removeEventListener('resize', handleResize)
+			}
+		}
+	}, []);
+
+	return <StyledComponent width={width} />
+}
+```
+
+...to this!
+
+```javascript
+const MyComponent = () => {
+	const width = useWindowWidth();
+	return <StyledComponent width={width} />
+}
+```
+
+Now I can slap that __one__ line of code into any component and it can access the ever-updating value of a window's dimensions!
+
+## Idea #3
+
+I was so excited by this point. I just wrote two working custom hooks and I was really feeling myself. But I had another thought...
+
+_what if I ever needed access to __both__ the height and width?_
+
+I really didn't want to import two hooks and then use them both on separate lines to be able to use the height and width. So I opted to create a third hook that returned an object with height and width key-value pairs.
+
+This... is where things take a bit of a turn. This task wasn't as simple as the previous two custom hooks.
