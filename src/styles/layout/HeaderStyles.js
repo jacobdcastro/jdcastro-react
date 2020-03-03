@@ -1,16 +1,41 @@
 import styled from 'styled-components';
+import { lightTheme } from '../../styles/layout/__themes';
 
 const HeaderWrapper = styled.header`
+  ${props => console.log(props.theme.bgColor === lightTheme.bgColor)}
   position: fixed;
   z-index: 5;
   top: 0;
   left: 0;
   width: 100vw;
   height: 70px;
-  background-color: ${props => props.theme.bgColor};
-  transition: background-color ${props => props.theme.transition},
+  background-color: ${props => props.theme.bgColor}
+  background: ${props => {
+    if (props.theme.bgColor === lightTheme.bgColor) {
+      return props.theme.bgColor;
+    } else {
+      if (!props.isScrolled) {
+        return props.theme.bgColor;
+      } else {
+        return `
+        linear-gradient(
+          180deg,
+          rgba(2, 0, 36, 1) 0%,
+          rgba(26, 30, 28, 0.891176538974965) 77%,
+          rgba(26, 30, 28, 0) 100%
+        )
+      `;
+      }
+    }
+  }};
+  transition:
+    background-color ${props => props.theme.transition},
+    background ${props => props.theme.transition},
     box-shadow 0.3s;
-  box-shadow: ${props => (props.isScrolled ? '0px 0px 10px #4d4d4d' : 'none')};
+  box-shadow: ${props =>
+    props.isScrolled && props.theme.bgColor === lightTheme.bgColor
+      ? '0px 0px 10px #4d4d4d'
+      : 'none'};
   display: flex;
   justify-content: center;
 
