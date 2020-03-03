@@ -51,7 +51,13 @@ export const PROJECTS_PAGE_QUERY = graphql`
             slug
             title
             description
-            image
+            image {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
             imageTitle
             imageAlt
             startDate

@@ -111,7 +111,13 @@ export const BLOG_POST_QUERY = graphql`
         title
         slug
         subtitle
-        image
+        image {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
         imageTitle
         imageAlt
         date
