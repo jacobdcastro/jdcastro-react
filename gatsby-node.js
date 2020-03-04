@@ -18,7 +18,6 @@ exports.createPages = async ({ graphql, actions }) => {
               id
               frontmatter {
                 slug
-                image
               }
             }
           }
@@ -27,15 +26,13 @@ exports.createPages = async ({ graphql, actions }) => {
     `;
 
     // create page for each blog post
-    blogRes.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    await blogRes.data.allMarkdownRemark.edges.forEach(({ node }) => {
       createPage({
         path: `blog/${node.frontmatter.slug}`,
         component: blogPostTemplate,
         context: {
           id: node.id,
           slug: node.frontmatter.slug,
-          // relative filepath for blogPost.js query
-          imgUrl: `content/blog-posts/${node.frontmatter.image}`,
         },
       });
     });
@@ -51,7 +48,6 @@ exports.createPages = async ({ graphql, actions }) => {
               id
               frontmatter {
                 slug
-                image
               }
             }
           }
@@ -60,15 +56,13 @@ exports.createPages = async ({ graphql, actions }) => {
     `;
 
     // create page for each project
-    projectRes.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    await projectRes.data.allMarkdownRemark.edges.forEach(({ node }) => {
       createPage({
         path: `blog/${node.frontmatter.slug}`,
         component: projectTemplate,
         context: {
           id: node.id,
           slug: node.frontmatter.slug,
-          // relative filepath for blogPost.js query
-          imgUrl: `content/projects/${node.frontmatter.image}`,
         },
       });
     });

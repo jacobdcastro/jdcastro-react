@@ -16,20 +16,20 @@ const blogPost = ({ path, data }) => {
     subtitle,
     slug,
     type,
+    image,
     imageTitle,
     imageAlt,
     date,
     tags,
   } = data.markdownRemark.frontmatter;
-  console.log(data);
 
   const seo = {
     page: `${type}`,
     title: `${title}`,
     description: `${data.markdownRemark.excerpt}`,
     url: `https://jacobdcastro.com/${slug}`,
-    imgUrl: `${data.file.publicURL}`,
-    imgAlt: `${data.file.imageAlt}`,
+    imgUrl: `${image.publicURL}`,
+    imgAlt: `${imageAlt}`,
     breadcrumbs: [
       {
         name: 'Blog',
@@ -100,7 +100,7 @@ blogPost.propTypes = {
 export default blogPost;
 
 export const BLOG_POST_QUERY = graphql`
-  query BLOG_POST_QUERY($slug: String!, $imgUrl: String) {
+  query BLOG_POST_QUERY($slug: String!) {
     markdownRemark(frontmatter: { slug: { eq: $slug } }) {
       id
       html
@@ -112,6 +112,7 @@ export const BLOG_POST_QUERY = graphql`
         slug
         subtitle
         image {
+          publicURL
           childImageSharp {
             fluid {
               ...GatsbyImageSharpFluid_withWebp
@@ -122,15 +123,6 @@ export const BLOG_POST_QUERY = graphql`
         imageAlt
         date
         tags
-      }
-    }
-
-    file(relativePath: { eq: $imgUrl }) {
-      publicURL # used for SEO
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid_withWebp
-        }
       }
     }
   }
