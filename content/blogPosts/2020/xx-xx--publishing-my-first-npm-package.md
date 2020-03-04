@@ -154,3 +154,29 @@ _what if I ever needed access to __both__ the height and width?_
 I really didn't want to import two hooks and then use them both on separate lines to be able to use the height and width. So I opted to create a third hook that returned an object with height and width key-value pairs.
 
 This... is where things take a bit of a turn. This task wasn't as simple as the previous two custom hooks.
+
+In order to provide two values instead of one, it made sense that this hook returned an object with two key-value pairs: height and width. But in order to return an object, I first must create it. Time to develop this. Easy, right?
+
+## Engineering `useWindowDimensions()`
+
+First, a bit of backstory... I recently I had a deep dive into Redux while creating my full stack web application (I wrote a [blog post](https://jacobdcastro.com/blog/creating-my-first-full-stack-app-from-scratch-part-1) on this). So when it comes to state management, my mental model naturally goes right to a Redux-like architecture with action types, reducers, and the like.
+
+With that in mind, I originally developed this third custom hook to replace the __entire object__ in state every time the window was resized. This seemed inefficient, especially if the width changed but the height didn't. Why update the height with the literal same value when it didn't change?
+
+\*Redux mental model calls in the distance\*
+
+_Time to reframe this... What if I added a `switch` statement like I've used in Redux? I can define an "action type" and then update *only* the value that changed depending on the action, or, window resize type._
+
+It was time to just start hacking away.
+
+I figured there would need to be two switch statements: one to figure out what "type" of change happened (action type), and one to initialize the newly changed value (reducer).
+
+### How It Works
+
+1. Upon resizing the window, the first switch function (`checkResizeType()`) would be called to identify on which axis the window was resized, then return one of four different action types.
+	- xChange
+	- yChange
+	- xyChange
+	- noChange
+
+2. Once the "action type" is returned, the second switch function (`getNewState()`) is called to update what value...........
