@@ -17,6 +17,7 @@
   ],
   "scripts": {
     "start": "gatsby develop --port 1414 --host 0.0.0.0 --open",
+    "start-no-host": "gatsby develop --port 1414 --open",
     "dev": "gatsby develop",
     "build": "gatsby build",
     "format": "prettier --write \"**/*.{js,json,md}\" \"!node_modules/**\" \"!public/**\"",
