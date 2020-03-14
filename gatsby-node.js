@@ -7,7 +7,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   try {
     // query all blog posts
-    const blogRes = await graphql`
+    const blogRes = await graphql(`
       query BLOG_POST_PAGES_QUERY {
         allMarkdownRemark(
           filter: { frontmatter: { type: { eq: "blogPost" } } }
@@ -23,7 +23,7 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
-    `;
+    `);
 
     // create page for each blog post
     await blogRes.data.allMarkdownRemark.edges.forEach(({ node }) => {
@@ -38,7 +38,7 @@ exports.createPages = async ({ graphql, actions }) => {
     });
 
     // query all projects
-    const projectRes = await graphql`
+    const projectRes = await graphql(`
       query PROJECT_PAGES_QUERY {
         allMarkdownRemark(
           filter: { frontmatter: { type: { eq: "project" } } }
@@ -53,7 +53,7 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
-    `;
+    `);
 
     // create page for each project
     await projectRes.data.allMarkdownRemark.edges.forEach(({ node }) => {
