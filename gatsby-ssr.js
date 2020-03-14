@@ -9,5 +9,3 @@ export const wrapRootElement = ({ element }) => (
   </ThemeContextWrapper>
 );
 
-// ? primsjs stuff
-require('prismjs/themes/prism-tomorrow.css');
