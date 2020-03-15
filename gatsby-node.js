@@ -38,34 +38,34 @@ exports.createPages = async ({ graphql, actions }) => {
     });
 
     // query all projects
-    const projectRes = await graphql(`
-      query PROJECT_PAGES_QUERY {
-        allMarkdownRemark(
-          filter: { frontmatter: { type: { eq: "project" } } }
-        ) {
-          edges {
-            node {
-              id
-              frontmatter {
-                slug
-              }
-            }
-          }
-        }
-      }
-    `);
+    // const projectRes = await graphql(`
+    //   query PROJECT_PAGES_QUERY {
+    //     allMarkdownRemark(
+    //       filter: { frontmatter: { type: { eq: "project" } } }
+    //     ) {
+    //       edges {
+    //         node {
+    //           id
+    //           frontmatter {
+    //             slug
+    //           }
+    //         }
+    //       }
+    //     }
+    //   }
+    // `);
 
-    // create page for each project
-    await projectRes.data.allMarkdownRemark.edges.forEach(({ node }) => {
-      createPage({
-        path: `blog/${node.frontmatter.slug}`,
-        component: projectTemplate,
-        context: {
-          id: node.id,
-          slug: node.frontmatter.slug,
-        },
-      });
-    });
+    // // create page for each project
+    // await projectRes.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    //   createPage({
+    //     path: `blog/${node.frontmatter.slug}`,
+    //     component: projectTemplate,
+    //     context: {
+    //       id: node.id,
+    //       slug: node.frontmatter.slug,
+    //     },
+    //   });
+    // });
   } catch (error) {
     if (blogRes.errors) reject(blogRes.errors);
     else if (projectRes.errors) reject(projectRes.errors);

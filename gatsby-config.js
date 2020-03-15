@@ -6,7 +6,14 @@ module.exports = {
     siteUrl: 'https://jacobdcastro.com',
   },
   pathPrefix: '/blog',
+  pathPrefix: '/projects',
   plugins: [
+    'gatsby-plugin-sitemap',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-offline',
+    'gatsby-plugin-lodash',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
@@ -72,6 +79,12 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 880,
+            },
+          },
+          {
             resolve: 'gatsby-remark-prismjs',
             options: {
               classPrefix: 'language-',
@@ -114,11 +127,6 @@ module.exports = {
         ),
       },
     },
-    'gatsby-plugin-sitemap',
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-offline',
-    'gatsby-plugin-lodash',
+    
   ],
 };
