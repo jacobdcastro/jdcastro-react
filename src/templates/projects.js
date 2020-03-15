@@ -13,7 +13,7 @@ const Projects = ({ path, data }) => {
     description:
       // eslint-disable-next-line quotes
       "Some project examples of mine. Ranging from personal side projects to paid client projects, I've had a lot of fun!",
-    // imgUrl: `${data.pageImg.publicURL}`,
+    // imgUrl: `${data.image.publicURL}`,
     // imgAlt:
     //   'jdcastro logo, twitter, instagram, facebook, github icons with @jacobdcastro username',
     breadcrumbs: [

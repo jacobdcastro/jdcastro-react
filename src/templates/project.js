@@ -74,7 +74,7 @@ const blogPost = ({ path, data }) => {
           style={{
             marginBottom: '25px',
           }}
-          fluid={data.file.childImageSharp.fluid}
+          fluid={image.childImageSharp.fluid}
           alt={imageAlt}
           title={imageTitle}
         />
