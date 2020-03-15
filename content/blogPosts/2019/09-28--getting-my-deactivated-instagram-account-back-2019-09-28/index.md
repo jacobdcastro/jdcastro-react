@@ -2,7 +2,7 @@
 slug: "getting-my-deactivated-instagram-account-back-2019-09-28"
 title: "Getting My Deactivated Instagram Account Back (Sept. 2019)"
 subtitle: "It was pretty annoying... But I learned a cool lesson."
-image: "prateek-katyal-xv7-GlvBLFw-unsplash.jpg"
+image: prateek-katyal-xv7-GlvBLFw-unsplash.jpg
 imageTitle: "Getting My Deactivated Instagram Account Back"
 imageAlt: "Instagram 'likes' notification with 0 new likes"
 date: "2019-09-28T00:00:00-07:00"
@@ -39,7 +39,7 @@ So I tapped that "Learn More" button so fast.
 
 After clicking the button, I was redirected to the Instagram website where there was a form I could fill out to appeal for my account back.
 
-![Instagram form for appealing for your disabled account reactivation](https://jacobdcastro.com/content/images/getting-my-deactivated-instagram-account-back/instagram-appeal-form.png "Instagram Reactivation Form")
+![Instagram form for appealing for your disabled account reactivation](./instagram-appeal-form.png "Instagram Reactivation Form")
 
 For the life of me, I could not remember which email I used to login since I was always logged in on my phone. Both my business and personal emails made sense, so I just submitted it twice saying something like "After reading through Instagram's Community Guidelines, I can ensure you I did not break any guidelines. I've played within the rules and would appreciate my account being reactivated."
 
