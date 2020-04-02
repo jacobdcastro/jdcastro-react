@@ -12,9 +12,9 @@ const Blog = ({ path, data }) => {
     title: 'Blog',
     description:
       // eslint-disable-next-line quotes
-      "I like writing about things. Life updates, random epiphanies, cool lessons, etc. Find 'em here!",
+      'I like to blog about tech! Featuring tutorials, new tech discoveries, and other ramblings about my coding career.',
     url: 'https://jacobdcastro.com/blog',
-    imgUrl: `${data.pageImg.publicURL}`,
+    imgUrl: data.pageImg.publicURL,
     imgAlt:
       'jdcastro logo, twitter, instagram, facebook, github icons with @jacobdcastro username',
     breadcrumbs: [

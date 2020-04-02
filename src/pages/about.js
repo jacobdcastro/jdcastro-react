@@ -8,9 +8,9 @@ const About = ({ path, data }) => {
   const seo = {
     page: 'about',
     title: 'About Me',
-    description: `${data.me.childMarkdownRemark.excerpt}`,
+    description: data.me.childMarkdownRemark.excerpt,
     url: 'https://jacobdcastro.com/about',
-    imgUrl: `${data.pageImg.publicURL}`,
+    imgUrl: data.pageImg.publicURL,
     imgAlt:
       'jdcastro logo, twitter, instagram, facebook, github icons with @jacobdcastro username',
     breadcrumbs: [

@@ -24,9 +24,9 @@ const Index = ({ path, data }) => {
   const seo = {
     page: 'index',
     title: '',
-    description: `${miniBio}`,
+    description: miniBio,
     url: 'https://jacobdcastro.com',
-    imgUrl: `${data.pageImg.publicURL}`,
+    imgUrl: data.pageImg.publicURL,
     imgAlt:
       'jdcastro logo, twitter, instagram, facebook, github icons with @jacobdcastro username',
     breadcrumbs: [],

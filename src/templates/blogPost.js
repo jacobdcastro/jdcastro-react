@@ -24,19 +24,19 @@ const blogPost = ({ path, data }) => {
   } = data.markdownRemark.frontmatter;
 
   const seo = {
-    page: `${type}`,
-    title: `${title}`,
-    description: `${data.markdownRemark.excerpt}`,
+    page: type,
+    title: title,
+    description: data.markdownRemark.excerpt,
     url: `https://jacobdcastro.com/${slug}`,
-    imgUrl: `${image.publicURL}`,
-    imgAlt: `${imageAlt}`,
+    imgUrl: image.publicURL,
+    imgAlt: imageAlt,
     breadcrumbs: [
       {
         name: 'Blog',
         path: '/blog',
       },
       {
-        name: `${title}`,
+        name: title,
         path: `/blog/${slug}`,
       },
     ],
