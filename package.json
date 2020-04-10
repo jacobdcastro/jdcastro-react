@@ -31,8 +31,6 @@
     "blog"
   ],
   "dependencies": {
-    "@mdx-js/mdx": "^1.5.7",
-    "@mdx-js/react": "^1.5.7",
     "axios": "^0.19.2",
     "dotenv": "^8.2.0",
     "gatsby": "^2.19.43",
@@ -40,7 +38,6 @@
     "gatsby-plugin-google-analytics": "^2.1.37",
     "gatsby-plugin-lodash": "^3.1.21",
     "gatsby-plugin-manifest": "^2.2.47",
-    "gatsby-plugin-mdx": "^1.0.82",
     "gatsby-plugin-offline": "^3.0.40",
     "gatsby-plugin-react-helmet": "^3.1.23",
     "gatsby-plugin-robots-txt": "^1.5.0",
