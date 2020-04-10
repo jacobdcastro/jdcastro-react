@@ -40,38 +40,38 @@ Projects.propTypes = {
   data: PropTypes.object.isRequired,
 };
 
-export const PROJECTS_PAGE_QUERY = graphql`
-  query PROJECTS_PAGE_QUERY {
-    allMarkdownRemark(filter: { frontmatter: { type: { eq: "project" } } }) {
-      edges {
-        node {
-          id
-          html
-          frontmatter {
-            slug
-            title
-            description
-            image {
-              childImageSharp {
-                fluid {
-                  ...GatsbyImageSharpFluid_withWebp
-                }
-              }
-            }
-            imageTitle
-            imageAlt
-            startDate
-            endDate
-            projectType
-            stack
-            repoUrl
-            liveUrl
-            type
-          }
-        }
-      }
-    }
-  }
-`;
+// export const PROJECTS_PAGE_QUERY = graphql`
+//   query PROJECTS_PAGE_QUERY {
+//     allMarkdownRemark(filter: { frontmatter: { type: { eq: "project" } } }) {
+//       edges {
+//         node {
+//           id
+//           html
+//           frontmatter {
+//             slug
+//             title
+//             description
+//             image {
+//               childImageSharp {
+//                 fluid {
+//                   ...GatsbyImageSharpFluid_withWebp
+//                 }
+//               }
+//             }
+//             imageTitle
+//             imageAlt
+//             startDate
+//             endDate
+//             projectType
+//             stack
+//             repoUrl
+//             liveUrl
+//             type
+//           }
+//         }
+//       }
+//     }
+//   }
+// `;
 
 export default Projects;

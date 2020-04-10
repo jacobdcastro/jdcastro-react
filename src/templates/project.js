@@ -99,31 +99,31 @@ blogPost.propTypes = {
 
 export default blogPost;
 
-export const PROJECT_QUERY = graphql`
-  query PROJECT_QUERY($slug: String!) {
-    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
-      id
-      html
-      excerpt(pruneLength: 370)
-      timeToRead
-      frontmatter {
-        type
-        title
-        slug
-        subtitle
-        image {
-          publicURL
-          childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
-        }
-        imageTitle
-        imageAlt
-        date
-        tags
-      }
-    }
-  }
-`;
+// export const PROJECT_QUERY = graphql`
+//   query PROJECT_QUERY($slug: String!) {
+//     markdownRemark(frontmatter: { slug: { eq: $slug } }) {
+//       id
+//       html
+//       excerpt(pruneLength: 370)
+//       timeToRead
+//       frontmatter {
+//         type
+//         title
+//         slug
+//         subtitle
+//         image {
+//           publicURL
+//           childImageSharp {
+//             fluid {
+//               ...GatsbyImageSharpFluid_withWebp
+//             }
+//           }
+//         }
+//         imageTitle
+//         imageAlt
+//         date
+//         tags
+//       }
+//     }
+//   }
+// `;

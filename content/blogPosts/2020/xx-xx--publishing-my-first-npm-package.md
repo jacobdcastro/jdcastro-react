@@ -25,13 +25,15 @@ The component needed to somehow get the width of the window so that some CSS pro
 
 Loving styled-components the way that I do, I installed it knowing I could simply get the `window.innerWidth`, pass it to the styled component as a prop, and use the window width integer in the CSS. But that was quickly debunked after resizing the window; the value sent to the CSS wasn't changing.
 
-I soon added local state via `useState` in the component that held the window's current width, as I planned on sending the width to more components as props. It's good to ensure a single source of truth.
+I soon added local state via `useState` in the component that held the window's current width, as I planned on sending the width to more than one component as a prop. It's good to ensure a single source of truth.
 
 So how do I get the state to update when the window is resized?
 
 Event listeners! Which I placed in the `useEffect` hook. My component now looked something like this:
 
 ```javascript
+// MyComponent.js
+
 const MyComponent = () => {
 	const [width, setWidth] = useState(null);
 	const handleResize = () => setWidth(window.innerWidth);
@@ -52,7 +54,7 @@ const MyComponent = () => {
 
 I came to this after a bunch of tinkering. But finally, things were beginning to work as planned, the logic was clean, and the integer was being sent to the styled component as planned.
 
-But then I realized I had a sibling AND parent component that needed the same logic. Three separate components needed access to a live-updating window width value. So I was faced with a couple of options.
+But then I realized I had a few other completely separate components that needed the same logic. Three components needed access to a live-updating window width value. So I was faced with a couple of options.
 
 ### Idea #1
 
@@ -102,7 +104,7 @@ const useWindowWidth = () => {
     }
   }, []);
 
-  // if width is null, return 0 to prevent prop-type errors
+  // if width is null, return 0 to prevent type errors
   return width ? width : 0;
 };
 
@@ -170,6 +172,8 @@ _Time to reframe this... What if I added a `switch` statement like I've used in 
 It was time to just start hacking away.
 
 I figured there would need to be two switch statements: one to figure out what "type" of change happened (action type), and one to initialize the newly changed value (reducer).
+
+Thankfully, there's a built-in feature in React for this to work well, the `useReducer` hook!
 
 ### How It Works
 

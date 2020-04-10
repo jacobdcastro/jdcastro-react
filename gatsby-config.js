@@ -6,7 +6,7 @@ module.exports = {
     siteUrl: 'https://jacobdcastro.com',
   },
   pathPrefix: '/blog',
-  pathPrefix: '/projects',
+  // pathPrefix: '/projects',
   plugins: [
     'gatsby-plugin-sitemap',
     'gatsby-plugin-sharp',
@@ -42,7 +42,6 @@ module.exports = {
         path: path.join(__dirname, 'src', 'images'),
       },
     },
-
     {
       resolve: 'gatsby-source-filesystem',
       options: {

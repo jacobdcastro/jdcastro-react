@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const BlogPostPageWrapper = styled.div`
+const BlogPost = styled.article`
   margin-top: 100px;
   transition: ${props => props.theme.transition};
   background-color: ${props => props.theme.bgColor};
@@ -97,4 +97,4 @@ const BlogPostPageWrapper = styled.div`
   }
 `;
 
-export default BlogPostPageWrapper;
+export default BlogPost;
