@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
 import Moment from 'react-moment';
 import BlogAuthor from '../components/blog/BlogAuthor';
-import BlogPostPageWrapper from '../styles/blog/BlogPostStyles';
+import BlogPost from '../styles/blog/BlogPostStyles';
 import JDCLogo from '../images/svg/SignatureLogoSVG';
 
 // TODO add next and previous post links
@@ -44,31 +44,33 @@ const blogPost = ({ path, data }) => {
 
   return (
     <Layout seo={seo} path={path} style={{ textAlign: 'left' }}>
-      <BlogPostPageWrapper>
-        <h1>{title}</h1>
-        <h2>{subtitle}</h2>
-        <ul>
-          {tags &&
-            tags.map((tag, i) => (
-              <li className="listingTag" key={i}>
-                <h5>{tag}</h5>
-              </li>
+      <BlogPost>
+        <header>
+          <h1>{title}</h1>
+          <h2>{subtitle}</h2>
+          <ul>
+            {tags &&
+              tags.map((tag, i) => (
+                <li className="listingTag" key={i}>
+                  <h5>{tag}</h5>
+                </li>
+              ))}
+          </ul>
+          <span className="published">
+            Published: <Moment date={date} format="MMM DD, YYYY" />
+          </span>
+
+          {data.markdownRemark.timeToRead &&
+            (type === 'tutorial' ? (
+              <span>
+                Approx. {data.markdownRemark.timeToRead + 5} minutes to complete
+              </span>
+            ) : (
+              <span>{data.markdownRemark.timeToRead} minute read</span>
             ))}
-        </ul>
-        <span className="published">
-          Published: <Moment date={date} format="MMM DD, YYYY" />
-        </span>
 
-        {data.markdownRemark.timeToRead &&
-          (type === 'tutorial' ? (
-            <span>
-              Approx. {data.markdownRemark.timeToRead + 5} minutes to complete
-            </span>
-          ) : (
-            <span>{data.markdownRemark.timeToRead} minute read</span>
-          ))}
-
-        <BlogAuthor />
+          <BlogAuthor />
+        </header>
 
         <Img
           style={{
@@ -87,7 +89,7 @@ const blogPost = ({ path, data }) => {
           <JDCLogo />
           <h3>- Jacob D. Castro</h3>
         </div>
-      </BlogPostPageWrapper>
+      </BlogPost>
     </Layout>
   );
 };
