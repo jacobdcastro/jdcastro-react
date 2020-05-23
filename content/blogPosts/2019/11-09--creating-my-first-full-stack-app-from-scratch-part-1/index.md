@@ -2,7 +2,7 @@
 slug: "creating-my-first-full-stack-app-from-scratch-part-1"
 title: "Creating My First Full Stack App From Scratch (Part 1)"
 subtitle: "Moving from primarily-frontend to building an API alongside a single-page React app opened up my world."
-image: gamenightscore-screenshot.png
+image: ./gamenightscore-screenshot.png
 imageTitle: "GamenightScore Lobby"
 imageAlt: "screenshot of gamenightscore app with player's scores"
 date: "2019-11-09T00:00:00-07:00"

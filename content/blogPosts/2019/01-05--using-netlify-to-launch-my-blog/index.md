@@ -2,7 +2,7 @@
 slug: "using-netlify-to-launch-my-blog"
 title: "Using Netlify to Launch My Blog"
 subtitle: "I found the best tool of 2018, hands down."
-image: jason-leung-479251-unsplash.jpg
+image: ./jason-leung-479251-unsplash.jpg
 imageTitle: "Confetti Falling"
 imageAlt: "Colorful confetti falling with bright background"
 date: "2019-01-05T00:00:00-07:00"

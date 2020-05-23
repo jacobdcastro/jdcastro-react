@@ -2,7 +2,7 @@
 slug: "window-dimensions-hooks-my-first-published-npm-package"
 title: "window-dimensions-hooks: My First Published NPM Package"
 subtitle: "I always wanted to publish my very own NPM module, but never had any ideas until I built a hook for an actual use-case."
-# image: "gamenightscore-screenshot.png"
+# image: ./gamenightscore-screenshot.png
 # imageTitle: "GamenightScore Lobby"
 # imageAlt: "screenshot of gamenightscore app with player's scores"
 # date: "2019-11-09T00:00:00-07:00"
@@ -35,21 +35,21 @@ Event listeners! Which I placed in the `useEffect` hook. My component now looked
 // MyComponent.js
 
 const MyComponent = () => {
-	const [width, setWidth] = useState(null);
-	const handleResize = () => setWidth(window.innerWidth);
+  const [width, setWidth] = useState(null);
+  const handleResize = () => setWidth(window.innerWidth);
 
-	useEffect(() => {
-		if (typeof window !== 'undefined') {
-			setWidth(window.innerWidth);
-			window.addEventListener('resize', handleResize);
-			return () => {
-				window.removeEventListener('resize', handleResize)
-			}
-		}
-	}, []);
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setWidth(window.innerWidth);
+      window.addEventListener("resize", handleResize);
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }
+  }, []);
 
-	return <StyledComponent width={width} />
-}
+  return <StyledComponent width={width} />;
+};
 ```
 
 I came to this after a bunch of tinkering. But finally, things were beginning to work as planned, the logic was clean, and the integer was being sent to the styled component as planned.
@@ -119,39 +119,39 @@ It was officially time to use the hook in my component! Remember the original co
 
 ```javascript
 const MyComponent = () => {
-	const [width, setWidth] = useState(null);
-	const handleResize = () => setWidth(window.innerWidth);
+  const [width, setWidth] = useState(null);
+  const handleResize = () => setWidth(window.innerWidth);
 
-	useEffect(() => {
-		if (typeof window !== 'undefined') {
-			setWidth(window.innerWidth);
-			window.addEventListener('resize', handleResize);
-			return () => {
-				window.removeEventListener('resize', handleResize)
-			}
-		}
-	}, []);
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setWidth(window.innerWidth);
+      window.addEventListener("resize", handleResize);
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }
+  }, []);
 
-	return <StyledComponent width={width} />
-}
+  return <StyledComponent width={width} />;
+};
 ```
 
 ...to this!
 
 ```javascript
 const MyComponent = () => {
-	const width = useWindowWidth();
-	return <StyledComponent width={width} />
-}
+  const width = useWindowWidth();
+  return <StyledComponent width={width} />;
+};
 ```
 
-Now I can slap that __one__ line of code into any component and it can access the ever-updating value of a window's dimensions!
+Now I can slap that **one** line of code into any component and it can access the ever-updating value of a window's dimensions!
 
 ## Idea #3
 
 I was so excited by this point. I just wrote two working custom hooks and I was really feeling myself. But I had another thought...
 
-_what if I ever needed access to __both__ the height and width?_
+_what if I ever needed access to **both** the height and width?_
 
 I really didn't want to import two hooks and then use them both on separate lines to be able to use the height and width. So I opted to create a third hook that returned an object with height and width key-value pairs.
 
@@ -163,7 +163,7 @@ In order to provide two values instead of one, it made sense that this hook retu
 
 First, a bit of backstory... I recently I had a deep dive into Redux while creating my full stack web application (I wrote a [blog post](https://jacobdcastro.com/blog/creating-my-first-full-stack-app-from-scratch-part-1) on this). So when it comes to state management, my mental model naturally goes right to a Redux-like architecture with action types, reducers, and the like.
 
-With that in mind, I originally developed this third custom hook to replace the __entire object__ in state every time the window was resized. This seemed inefficient, especially if the width changed but the height didn't. Why update the height with the literal same value when it didn't change?
+With that in mind, I originally developed this third custom hook to replace the **entire object** in state every time the window was resized. This seemed inefficient, especially if the width changed but the height didn't. Why update the height with the literal same value when it didn't change?
 
 \*Redux mental model calls in the distance\*
 
@@ -178,9 +178,10 @@ Thankfully, there's a built-in feature in React for this to work well, the `useR
 ### How It Works
 
 1. Upon resizing the window, the first switch function (`checkResizeType()`) would be called to identify on which axis the window was resized, then return one of four different action types.
-	- xChange
-	- yChange
-	- xyChange
-	- noChange
+
+   - xChange
+   - yChange
+   - xyChange
+   - noChange
 
 2. Once the "action type" is returned, the second switch function (`getNewState()`) is called to update what value...........

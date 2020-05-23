@@ -3,7 +3,7 @@ type: "blogPost"
 slug: "using-contentful-on-my-blog"
 title: "Using Contentful On My Blog"
 subtitle: "My blog is headless and it's incredible"
-image: "rawpixel-567018-unsplash.jpg"
+image: ./rawpixel-567018-unsplash.jpg
 imageTitle: "Typewriter"
 imageAlt: "Hands typing on typewriter"
 date: "2018-11-24T00:00:00-07:00"

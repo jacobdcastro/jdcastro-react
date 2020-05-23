@@ -2,7 +2,7 @@
 slug: "gatsby-first-thoughts"
 title: "Gatsby First Thoughts"
 subtitle: "I built my website in Gatsby and I'm in love"
-image: sandro-katalina-457230-unsplash.jpg
+image: ./sandro-katalina-457230-unsplash.jpg
 imageTitle: "Purple Triangle Neon Lights"
 imageAlt: "Purple neon lights in dark, triangle hallway"
 date: "2018-11-22T00:00:00-07:00"

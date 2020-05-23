@@ -42,6 +42,8 @@ const blogPost = ({ path, data }) => {
     ],
   };
 
+  console.log(data.markdownRemark.frontmatter);
+
   return (
     <Layout seo={seo} path={path} style={{ textAlign: 'left' }}>
       <BlogPost>

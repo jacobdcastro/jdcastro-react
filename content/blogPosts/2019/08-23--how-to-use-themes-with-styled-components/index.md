@@ -2,7 +2,7 @@
 slug: "how-to-use-themes-with-styled-components"
 title: "How To Use Themes with styled-components"
 subtitle: "A tutorial on React and CSS-in-JS"
-image: cover-photo.png
+image: ./cover-photo.png
 imageTitle: "create-react-app page"
 imageAlt: "create-react-app page with theme toggle button"
 repo: "https://github.com/jacobdcastro/styled-components-theme-tutorial"

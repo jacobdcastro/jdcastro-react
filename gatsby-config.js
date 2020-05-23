@@ -11,6 +11,7 @@ module.exports = {
     'gatsby-plugin-sitemap',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
+    'gatsby-remark-images',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-offline',
     'gatsby-plugin-lodash',
@@ -47,6 +48,13 @@ module.exports = {
       options: {
         name: 'images',
         path: path.join(__dirname, 'content'),
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'images',
+        path: path.join(__dirname, 'content', 'blogPosts'),
       },
     },
     {

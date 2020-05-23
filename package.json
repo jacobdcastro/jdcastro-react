@@ -16,9 +16,9 @@
     }
   ],
   "scripts": {
-    "start": "gatsby develop --port 1414 --host 0.0.0.0 --open",
-    "start-no-host": "gatsby develop --port 1414 --open",
-    "dev": "gatsby develop",
+    "start": "gatsby develop --post 1414",
+    "dev-no-host": "gatsby develop --port 1414 --open",
+    "dev": "gatsby develop --port 1414 --host 0.0.0.0 --open",
     "build": "gatsby build --prefix-paths",
     "format": "prettier --write \"**/*.{js,json,md}\" \"!node_modules/**\" \"!public/**\"",
     "test": "jest --watchAll"
@@ -26,7 +26,6 @@
   "keywords": [
     "gatsby",
     "react",
-    "static",
     "portfolio",
     "blog"
   ],

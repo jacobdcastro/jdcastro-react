@@ -3,7 +3,7 @@ type: "blogPost"
 slug: "welcome"
 title: "Welcome!"
 subtitle: "My First Blog Post"
-image: olivier-collet-1165010-unsplash.jpg
+image: ./olivier-collet-1165010-unsplash.jpg
 imageTitle: "Train in Subway"
 imageAlt: "Subway hallway looking at blurry, moving train"
 date: "2018-11-21T00:00:00-07:00"
