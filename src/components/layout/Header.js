@@ -1,26 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Link } from 'gatsby';
 import LogoSVG from '../../images/svg/SignatureLogoSVG'; // inline svg component
 import { HeaderWrapper } from '../../styles/layout/HeaderStyles';
-import '../../styles/layout/hamburgers.css';
+import useScrollListener from '../../utils/hooks/useScrollListener';
+// import '../../styles/layout/hamburgers.css';
 
 const Header = () => {
-  // set boolean state and listen for scroll events
+  // custom hook listens to scroll values and sets state
   // isScrolled value sent to <HeaderWrapper> styled component
-  let [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    window.addEventListener('scroll', () => {
-      if (
-        document.body.scrollTop > 30 ||
-        document.documentElement.scrollTop > 30
-      ) {
-        setIsScrolled((isScrolled = true));
-      } else {
-        setIsScrolled((isScrolled = false));
-      }
-    });
-  }, []);
+  let isScrolled = useScrollListener();
 
   return (
     <HeaderWrapper isScrolled={isScrolled}>

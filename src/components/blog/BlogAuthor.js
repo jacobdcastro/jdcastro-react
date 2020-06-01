@@ -6,19 +6,16 @@ const BlogAuthor = () => {
   const myData = useStaticQuery(graphql`
     query {
       file(relativePath: { eq: "me.md" }) {
-        childMarkdownRemark {
+        childMdx {
           id
           frontmatter {
             name
             miniBio
-            portrait
             email
             handle
             twitterURL
             instagramURL
             githubURL
-            # facebookURL
-            # snapchat
             linkedinURL
           }
         }
@@ -34,13 +31,7 @@ const BlogAuthor = () => {
     }
   `);
 
-  const {
-    name,
-    miniBio,
-    portrait,
-    email,
-    handle,
-  } = myData.file.childMarkdownRemark.frontmatter;
+  const { name, miniBio } = myData.file.childMdx.frontmatter;
 
   return (
     <div className="author">
@@ -52,12 +43,12 @@ const BlogAuthor = () => {
           style={{
             height: '80px',
             width: '80px',
-            borderRadius: '100%'
+            borderRadius: '100%',
           }}
         />
       </div>
       <div className="myInfo">
-        <h3>By: {name}</h3>
+        <h3 className="myName">By: {name}</h3>
         <p>{miniBio}</p>
       </div>
     </div>

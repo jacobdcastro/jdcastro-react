@@ -6,7 +6,7 @@ import FooterWrapper from '../../styles/layout/FooterStyles';
 
 import gatsbyImg from '../../images/tech-icons/Gatsby_Monogram.svg';
 import javascriptImg from '../../images/tech-icons/javascript.svg';
-import mdImg from '../../images/tech-icons/markdown.svg';
+import mdxImg from '../../images/tech-icons/mdx.svg';
 import netlifyImg from '../../images/tech-icons/netlify.svg';
 import reactImg from '../../images/tech-icons/react.svg';
 
@@ -14,7 +14,7 @@ const Footer = () => {
   const data = useStaticQuery(graphql`
     query {
       me: file(relativePath: { eq: "me.md" }) {
-        childMarkdownRemark {
+        childMdx {
           frontmatter {
             url
             email
@@ -35,7 +35,7 @@ const Footer = () => {
     }
   `);
 
-  const { email, handle, url } = data.me.childMarkdownRemark.frontmatter;
+  const { email, handle, url } = data.me.childMdx.frontmatter;
   const images = [
     {
       img: javascriptImg,
@@ -62,10 +62,10 @@ const Footer = () => {
       alt: 'nail painting emoji as styled components logo',
     },
     {
-      img: mdImg,
-      url: 'https://www.markdownguide.org/',
-      title: 'Markdown',
-      alt: 'markdown logo',
+      img: mdxImg,
+      url: 'https://mdxjs.com/',
+      title: 'MDX',
+      alt: 'mdx logo',
     },
     {
       img: netlifyImg,
