@@ -1,16 +1,16 @@
 ---
-slug: "getting-my-deactivated-instagram-account-back-2019-09-28"
-title: "Getting My Deactivated Instagram Account Back (Sept. 2019)"
-subtitle: "It was pretty annoying... But I learned a cool lesson."
-image: ./prateek-katyal-xv7-GlvBLFw-unsplash.jpg
-imageTitle: "Getting My Deactivated Instagram Account Back"
-imageAlt: "Instagram 'likes' notification with 0 new likes"
-date: "2019-09-28T00:00:00-07:00"
+slug: getting-my-deactivated-instagram-account-back-2019-09-28
+title: Getting My Deactivated Instagram Account Back (Sept. 2019)
+subtitle: It was pretty annoying... But I learned a cool lesson.
+image: prateek-katyal-xv7-GlvBLFw-unsplash.jpg
+imageTitle: Getting My Deactivated Instagram Account Back
+imageAlt: Instagram 'likes' notification with 0 new likes
+date: 2019-09-28T00:00:00-07:00
 tags:
-  - "social media"
-  - "instagram"
-  - "content"
-type: "blogPost"
+  - social media
+  - instagram
+  - content
+type: blogPost
 ---
 
 It was 7:00am. Monday, September 9th, 2019.

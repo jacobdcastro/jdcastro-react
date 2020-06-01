@@ -1,19 +1,19 @@
 ---
-slug: "creating-my-first-full-stack-app-from-scratch-part-1"
-title: "Creating My First Full Stack App From Scratch (Part 1)"
-subtitle: "Moving from primarily-frontend to building an API alongside a single-page React app opened up my world."
-image: ./gamenightscore-screenshot.png
-imageTitle: "GamenightScore Lobby"
-imageAlt: "screenshot of gamenightscore app with player's scores"
-date: "2019-11-09T00:00:00-07:00"
+slug: creating-my-first-full-stack-app-from-scratch-part-1
+title: Creating My First Full Stack App From Scratch (Part 1)
+subtitle: Moving from primarily-frontend to building an API alongside a single-page React app opened up my world.
+image: gamenightscore-screenshot.png
+imageTitle: GamenightScore Lobby
+imageAlt: screenshot of gamenightscore app with player's scores
+date: 2019-11-09T00:00:00-07:00
 tags:
-  - "react"
-  - "nodejs"
-  - "express"
-  - "mongodb"
-  - "fullstack"
-  - "mern"
-type: "blogPost"
+  - react
+  - nodejs
+  - express
+  - mongodb
+  - fullstack
+  - mern
+type: blogPost
 ---
 
 Early on in my web development journey, I decided I wanted to get into full-stack development. I didn't really know any ways of practicing full-stack development though. It's easy to replicate a static site and practice frontend dev. But as soon as I felt ready to start learning backend, I felt a little lost on where to begin.So I pretty much stuck to frontend dev with a very (very) basic understanding of Nodejs/Express thanks to some Treehouse courses.

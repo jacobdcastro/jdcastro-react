@@ -1,12 +1,13 @@
 ---
-slug: "how-audio-engineering-helped-me-learn-web-development"
-title: "How Audio Engineering Helped Me Learn Web Development"
-subtitle: Running cables, testing mics, and adjusting equalizers really helped in my
+slug: how-audio-engineering-helped-me-learn-web-development
+title: How Audio Engineering Helped Me Learn Web Development
+subtitle:
+  Running cables, testing mics, and adjusting equalizers really helped in my
   understanding of JavaScript.
-image: kaleidico-26MJGnCM0Wc-unsplash.jpg
-imageTitle: Whiteboard
-imageAlt: Two designers writing on whiteboard. Photo by Kaleidico on Unsplash
-date: '2019-10-09T00:00:00-07:00'
+# image: kaleidico-26MJGnCM0Wc-unsplash.jpg
+# imageTitle: Whiteboard
+# imageAlt: Two designers writing on whiteboard. Photo by Kaleidico on Unsplash
+date: 2019-10-09T00:00:00-07:00
 tags:
   - frontend
   - development

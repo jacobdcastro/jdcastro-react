@@ -1,15 +1,15 @@
 ---
-slug: "gatsby-first-thoughts"
-title: "Gatsby First Thoughts"
-subtitle: "I built my website in Gatsby and I'm in love"
+slug: gatsby-first-thoughts
+title: Gatsby First Thoughts
+subtitle: I built my website in Gatsby and I'm in love
 image: ./sandro-katalina-457230-unsplash.jpg
-imageTitle: "Purple Triangle Neon Lights"
-imageAlt: "Purple neon lights in dark, triangle hallway"
-date: "2018-11-22T00:00:00-07:00"
+imageTitle: Purple Triangle Neon Lights
+imageAlt: Purple neon lights in dark, triangle hallway
+date: 2018-11-22T00:00:00-07:00
 tags:
-  - "life"
-  - "website"
-type: "blogPost"
+  - life
+  - website
+type: blogPost
 ---
 
 In the last 3-4 months, I've dedicated myself to learning React. I've been on JavaScript for the last year or so and decided it was time to learn a framework/library to expand my JavaScript skills. JavaScript always excited me. And hearing a lot about frameworks such as Angular, React, Vue, and, formerly, Ember, made me super curious about what they were and why I would need to use one.

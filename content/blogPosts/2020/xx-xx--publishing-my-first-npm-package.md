@@ -1,18 +1,18 @@
 ---
-slug: "window-dimensions-hooks-my-first-published-npm-package"
+slug: window-dimensions-hooks-my-first-published-npm-package
 title: "window-dimensions-hooks: My First Published NPM Package"
-subtitle: "I always wanted to publish my very own NPM module, but never had any ideas until I built a hook for an actual use-case."
-# image: ./gamenightscore-screenshot.png
-# imageTitle: "GamenightScore Lobby"
-# imageAlt: "screenshot of gamenightscore app with player's scores"
-# date: "2019-11-09T00:00:00-07:00"
+subtitle: I always wanted to publish my very own NPM module, but never had any ideas until I built a hook for an actual use-case.
+# image: gamenightscore-screenshot.png
+# imageTitle: GamenightScore Lobby
+# imageAlt: screenshot of gamenightscore app with player's scores
+# date: 2019-11-09T00:00:00-07:00
 tags:
-  - "react"
-  - "hooks"
-  - "npm"
-  - "package"
-  - "install"
-# type: "blogPost"
+  - react
+  - hooks
+  - npm
+  - package
+  - install
+# type: blogPost
 ---
 
 I am so excited to announce that I've finally written and published my very own NPM package! It's called window-dimensions-hooks. You can check it out [on NPM](https://www.npmjs.com/package/window-dimensions-hooks) or see the [source code on github](https://github.com/jacobdcastro/window-dimensions-hooks).
