@@ -9,7 +9,7 @@ const HeaderWrapper = styled.header`
   left: 0;
   width: 100vw;
   height: 70px;
-  background-color: ${props => props.theme.bgColor}
+  background-color: ${props => props.theme.bgColor};
   background: ${props => {
     if (props.theme.bgColor === lightTheme.bgColor) {
       return props.theme.bgColor;
@@ -21,17 +21,15 @@ const HeaderWrapper = styled.header`
         linear-gradient(
           180deg,
           rgba(2, 0, 36, 1) 0%,
-          rgba(26, 30, 28, 0.891176538974965) 77%,
+          rgba(26, 30, 28, 0.891176538974965) 90%,
           rgba(26, 30, 28, 0) 100%
         )
       `;
       }
     }
   }};
-  transition:
-    background-color ${props => props.theme.transition},
-    background ${props => props.theme.transition},
-    box-shadow 0.3s;
+  transition: background-color ${props => props.theme.transition},
+    background ${props => props.theme.transition}, box-shadow 0.3s;
   box-shadow: ${props =>
     props.isScrolled && props.theme.bgColor === lightTheme.bgColor
       ? '0px 0px 10px #4d4d4d'
@@ -97,6 +95,7 @@ const HeaderWrapper = styled.header`
             text-decoration: none;
             padding: 0 2px 6px;
             border-bottom: 3px solid transparent;
+            background-color: transparent;
           }
           a:hover {
             border-bottom: 3px solid ${props => props.theme.textColor};

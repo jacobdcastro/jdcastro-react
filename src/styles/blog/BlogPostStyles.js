@@ -6,13 +6,15 @@ const BlogPost = styled.article`
   background-color: ${props => props.theme.bgColor};
   width: 100%;
 
-  h1 {
+  .title {
     font-size: 3rem;
     margin-bottom: 14px;
   }
-  h2 {
-    font-size: 1.7rem;
-    margin: 10px 0 18px;
+  .subtitle {
+    font-size: 1.25rem;
+    font-style: italic;
+    margin: 0 0 10px;
+    line-height: 1.45rem;
   }
 
   ul {
@@ -25,16 +27,17 @@ const BlogPost = styled.article`
     .listingTag {
       margin: 0 8px 5px 0;
       font-size: 0.8rem;
-
-      h5 {
-        color: ${props => props.theme.accentColor};
-      }
+      font-weight: 600;
+      color: ${props => props.theme.accentColor};
     }
   }
 
   .published {
+    color: ${props => props.theme.textColor};
+    transition: ${props => props.theme.transition};
     margin-bottom: 3px;
     margin-right: 30px;
+    font-size: 1.1rem;
   }
 
   .author {
@@ -53,7 +56,7 @@ const BlogPost = styled.article`
     .myInfo {
       height: auto;
     }
-    h3 {
+    .myName {
       margin: 0 0 10px;
     }
     p {
