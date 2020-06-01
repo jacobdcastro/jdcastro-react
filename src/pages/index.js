@@ -19,7 +19,7 @@ const Index = ({ path, data }) => {
     instagramURL,
     githubURL,
     linkedinURL,
-  } = data.me.childMarkdownRemark.frontmatter;
+  } = data.me.childMdx.frontmatter;
 
   const seo = {
     page: 'index',
@@ -109,7 +109,7 @@ const Index = ({ path, data }) => {
         <div id="recentPublications">
           <h1>All Recent Publications</h1>
 
-          {data.allMarkdownRemark.edges.map(({ node }) => (
+          {data.allMdx.edges.map(({ node }) => (
             <BlogListing key={node.id} data={node} />
           ))}
         </div>
@@ -128,7 +128,7 @@ export default Index;
 export const INDEX_PAGE_QUERY = graphql`
   query INDEX_PAGE_QUERY {
     # all blog posts, sorted by most recent
-    allMarkdownRemark(
+    allMdx(
       sort: { fields: frontmatter___date, order: DESC }
       filter: { frontmatter: { type: { in: ["blogPost", "tutorial"] } } }
     ) {
@@ -151,11 +151,9 @@ export const INDEX_PAGE_QUERY = graphql`
 
     # social links from about markdown file
     me: file(relativePath: { eq: "me.md" }) {
-      childMarkdownRemark {
-        id
+      childMdx {
         frontmatter {
           email
-          phone
           handle
           miniBio
           username
@@ -163,7 +161,6 @@ export const INDEX_PAGE_QUERY = graphql`
           instagramURL
           githubURL
           facebookURL
-          snapchat
           linkedinURL
         }
       }

@@ -16,9 +16,9 @@
     }
   ],
   "scripts": {
-    "start": "gatsby develop --post 1414",
-    "dev-no-host": "gatsby develop --port 1414 --open",
-    "dev": "gatsby develop --port 1414 --host 0.0.0.0 --open",
+    "start": "gatsby develop --port 1414",
+    "dev": "gatsby develop --port 1414 --open",
+    "dev-host": "gatsby develop --port 1414 --host 0.0.0.0 --open",
     "build": "gatsby build --prefix-paths",
     "format": "prettier --write \"**/*.{js,json,md}\" \"!node_modules/**\" \"!public/**\"",
     "test": "jest --watchAll"
@@ -30,6 +30,8 @@
     "blog"
   ],
   "dependencies": {
+    "@mdx-js/mdx": "^1.6.4",
+    "@mdx-js/react": "^1.6.4",
     "axios": "^0.19.2",
     "dotenv": "^8.2.0",
     "gatsby": "^2.19.43",
@@ -37,6 +39,7 @@
     "gatsby-plugin-google-analytics": "^2.1.37",
     "gatsby-plugin-lodash": "^3.1.21",
     "gatsby-plugin-manifest": "^2.2.47",
+    "gatsby-plugin-mdx": "^1.2.13",
     "gatsby-plugin-offline": "^3.0.40",
     "gatsby-plugin-react-helmet": "^3.1.23",
     "gatsby-plugin-robots-txt": "^1.5.0",

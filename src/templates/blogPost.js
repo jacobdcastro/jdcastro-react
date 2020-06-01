@@ -7,10 +7,13 @@ import Moment from 'react-moment';
 import BlogAuthor from '../components/blog/BlogAuthor';
 import BlogPost from '../styles/blog/BlogPostStyles';
 import JDCLogo from '../images/svg/SignatureLogoSVG';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 // TODO add next and previous post links
 
-const blogPost = ({ path, data }) => {
+const blogPost = props => {
+  console.log(props);
+  const { path, data } = props;
   const {
     title,
     subtitle,
@@ -21,12 +24,12 @@ const blogPost = ({ path, data }) => {
     imageAlt,
     date,
     tags,
-  } = data.markdownRemark.frontmatter;
+  } = data.mdx.frontmatter;
 
   const seo = {
     page: type,
     title: title,
-    description: data.markdownRemark.excerpt,
+    description: data.mdx.excerpt,
     url: `https://jacobdcastro.com/${slug}`,
     imgUrl: image.publicURL,
     imgAlt: imageAlt,
@@ -42,33 +45,29 @@ const blogPost = ({ path, data }) => {
     ],
   };
 
-  console.log(data.markdownRemark.frontmatter);
-
   return (
     <Layout seo={seo} path={path} style={{ textAlign: 'left' }}>
       <BlogPost>
         <header>
-          <h1>{title}</h1>
-          <h2>{subtitle}</h2>
+          <h1 className="title">{title}</h1>
+          <p className="subtitle">{subtitle}</p>
           <ul>
             {tags &&
               tags.map((tag, i) => (
                 <li className="listingTag" key={i}>
-                  <h5>{tag}</h5>
+                  {tag}
                 </li>
               ))}
           </ul>
-          <span className="published">
+          <small className="published">
             Published: <Moment date={date} format="MMM DD, YYYY" />
-          </span>
+          </small>
 
-          {data.markdownRemark.timeToRead &&
+          {data.mdx.timeToRead &&
             (type === 'tutorial' ? (
-              <span>
-                Approx. {data.markdownRemark.timeToRead + 5} minutes to complete
-              </span>
+              <span>Approx. {data.mdx.timeToRead + 5} minutes to complete</span>
             ) : (
-              <span>{data.markdownRemark.timeToRead} minute read</span>
+              <span>{data.mdx.timeToRead} minute read</span>
             ))}
 
           <BlogAuthor />
@@ -83,9 +82,7 @@ const blogPost = ({ path, data }) => {
           title={imageTitle}
         />
 
-        <article
-          dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
-        />
+        <MDXRenderer>{data.mdx.body}</MDXRenderer>
 
         <div className="closing">
           <JDCLogo />
@@ -105,10 +102,10 @@ export default blogPost;
 
 export const BLOG_POST_QUERY = graphql`
   query BLOG_POST_QUERY($slug: String!) {
-    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
+    mdx(frontmatter: { slug: { eq: $slug } }) {
       id
-      html
       excerpt(pruneLength: 370)
+      body
       timeToRead
       frontmatter {
         type
@@ -116,9 +113,8 @@ export const BLOG_POST_QUERY = graphql`
         slug
         subtitle
         image {
-          publicURL
           childImageSharp {
-            fluid {
+            fluid(pngQuality: 100, webpQuality: 100) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }

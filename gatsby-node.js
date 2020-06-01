@@ -9,15 +9,28 @@ exports.createPages = async ({ graphql, actions }) => {
     // query all blog posts
     const blogRes = await graphql(`
       query BLOG_POST_PAGES_QUERY {
-        allMarkdownRemark(
+        allMdx(
           filter: { frontmatter: { type: { eq: "blogPost" } } }
           sort: { fields: [frontmatter___date], order: DESC }
         ) {
           edges {
+            next {
+              frontmatter {
+                title
+                slug
+                date
+              }
+            }
             node {
-              id
               frontmatter {
                 slug
+              }
+            }
+            previous {
+              frontmatter {
+                title
+                slug
+                date
               }
             }
           }
@@ -26,13 +39,14 @@ exports.createPages = async ({ graphql, actions }) => {
     `);
 
     // create page for each blog post
-    await blogRes.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    await blogRes.data.allMdx.edges.forEach(({ next, node, previous }) => {
       createPage({
         path: `blog/${node.frontmatter.slug}`,
         component: blogPostTemplate,
         context: {
-          id: node.id,
           slug: node.frontmatter.slug,
+          prev: previous,
+          next,
         },
       });
     });
@@ -67,9 +81,9 @@ exports.createPages = async ({ graphql, actions }) => {
     //   });
     // });
   } catch (error) {
-    if (blogRes.errors) reject(blogRes.errors);
-    else if (projectRes.errors) reject(projectRes.errors);
-    else reject(error);
+    // if (blogRes.errors) reject(blogRes.errors);
+    // else if (projectRes.errors) reject(projectRes.errors);
+    reject(error);
   }
 
   return;

@@ -25,11 +25,12 @@ const NotFoundWrapper = styled.div`
 
 const NotFound = () => {
   const seo = {
-    page: `404`,
+    page: '404',
     title: 'Page Not Found',
-    description: `Big oops, much sorry. You've hit a route that doesn't exist!`,
-    url: `https://jacobdcastro.com`,
-    imgUrl: ``,
+    // eslint-disable-next-line quotes
+    description: "Big oops, much sorry. You've hit a route that doesn't exist!",
+    url: 'https://jacobdcastro.com',
+    imgUrl: '',
     breadcrumbs: [],
   };
 

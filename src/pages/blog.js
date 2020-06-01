@@ -30,7 +30,7 @@ const Blog = ({ path, data }) => {
       <BlogPageWrapper>
         <h1>Blog Posts</h1>
         <div className="blogPostList">
-          {data.allMarkdownRemark.edges.map(({ node }) => (
+          {data.allMdx.edges.map(({ node }) => (
             <BlogListing key={node.id} data={node} />
           ))}
         </div>
@@ -48,7 +48,7 @@ export default Blog;
 
 export const BLOG_PAGE_QUERY = graphql`
   query BLOG_PAGE_QUERY {
-    allMarkdownRemark(
+    allMdx(
       filter: { frontmatter: { type: { eq: "blogPost" } } }
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
@@ -56,14 +56,11 @@ export const BLOG_PAGE_QUERY = graphql`
         node {
           id
           excerpt(pruneLength: 300)
-          html
           timeToRead
           frontmatter {
             slug
             title
             date
-            liveLink
-            repo
             type
             tags
           }

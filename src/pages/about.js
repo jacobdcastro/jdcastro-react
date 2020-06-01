@@ -3,12 +3,13 @@ import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import Layout from '../templates/layout';
 import { AboutPageWrapper } from '../styles/about/AboutStyles';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 const About = ({ path, data }) => {
   const seo = {
     page: 'about',
     title: 'About Me',
-    description: data.me.childMarkdownRemark.excerpt,
+    description: data.me.childMdx.excerpt,
     url: 'https://jacobdcastro.com/about',
     imgUrl: data.pageImg.publicURL,
     imgAlt:
@@ -23,11 +24,9 @@ const About = ({ path, data }) => {
 
   return (
     <Layout seo={seo} path={path}>
-      <AboutPageWrapper
-        dangerouslySetInnerHTML={{
-          __html: data.me.childMarkdownRemark.html,
-        }}
-      />
+      <AboutPageWrapper>
+        <MDXRenderer>{data.me.childMdx.body}</MDXRenderer>
+      </AboutPageWrapper>
     </Layout>
   );
 };
@@ -42,27 +41,23 @@ export default About;
 export const ABOUT_PAGE_QUERY = graphql`
   query ABOUT_PAGE_QUERY {
     me: file(relativePath: { eq: "me.md" }) {
-      childMarkdownRemark {
-        id
+      childMdx {
         excerpt(pruneLength: 370)
+        body
         frontmatter {
           title
           lastUpdated
           name
           email
-          phone
           miniBio
-          portrait
           handle
           username
           twitterURL
           instagramURL
           githubURL
           facebookURL
-          snapchat
           linkedinURL
         }
-        html
       }
     }
 

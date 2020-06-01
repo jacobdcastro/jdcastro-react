@@ -11,18 +11,19 @@ const Head = ({ seo }) => {
   const data = useStaticQuery(graphql`
     query HELMET_QUERY {
       file(relativePath: { eq: "me.md" }) {
-        childMarkdownRemark {
+        childMdx {
           frontmatter {
-            miniBio
+            lastUpdated
+            name
             email
-            phone
             url
+            miniBio
             handle
             username
             twitterURL
+            githubURL
             instagramURL
             facebookURL
-            snapchat
             linkedinURL
           }
         }
@@ -33,16 +34,14 @@ const Head = ({ seo }) => {
   const {
     miniBio,
     email,
-    // phone,
     url,
     handle,
     // username,
     twitterURL,
     instagramURL,
     facebookURL,
-    // snapchat,
     linkedinURL,
-  } = data.file.childMarkdownRemark.frontmatter;
+  } = data.file.childMdx.frontmatter;
 
   const breadcrumbs = seo.breadcrumbs.map((item, index) => {
     return {
