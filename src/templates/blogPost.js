@@ -9,7 +9,7 @@ import BlogPost from '../styles/blog/BlogPostStyles';
 import JDCLogo from '../images/svg/SignatureLogoSVG';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
-// TODO add next and previous post links
+// TODO add next and previous post links (from context)
 
 const blogPost = props => {
   console.log(props);

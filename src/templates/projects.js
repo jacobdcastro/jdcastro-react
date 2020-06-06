@@ -6,7 +6,6 @@ import ProjectListing from '../components/projects/ProjectListing';
 import ProjectsPageWrapper from '../styles/projects/ProjectsPageStyles';
 
 const Projects = ({ path, data }) => {
-  console.log(path, data);
   const seo = {
     page: 'projects',
     title: 'Projects',

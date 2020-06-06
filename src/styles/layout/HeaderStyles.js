@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { lightTheme } from '../../styles/layout/__themes';
 
 const HeaderWrapper = styled.header`
-  ${props => console.log(props.theme.bgColor === lightTheme.bgColor)}
   position: fixed;
   z-index: 5;
   top: 0;

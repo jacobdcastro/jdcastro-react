@@ -6,7 +6,7 @@ import useScrollListener from '../../utils/hooks/useScrollListener';
 // import '../../styles/layout/hamburgers.css';
 
 const Header = () => {
-  // custom hook listens to scroll values and sets state
+  // custom hook listens to scroll values,
   // isScrolled value sent to <HeaderWrapper> styled component
   let isScrolled = useScrollListener();
 
