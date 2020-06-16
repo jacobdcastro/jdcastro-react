@@ -40,8 +40,8 @@ const FooterWrapper = styled.footer`
     }
   }
 
-  small {
-    color: ${props => props.theme.textColor}
+  .copyright {
+    color: ${props => props.theme.textColor};
     padding-top: 5px;
   }
 `;

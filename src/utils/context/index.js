@@ -4,6 +4,7 @@ import { lightTheme } from '../../styles/layout/__themes';
 export const ThemeContext = createContext({
   currentTheme: lightTheme,
   transition: '0.5s',
+  isLight: true,
   toggleTheme: () => {},
 });
 

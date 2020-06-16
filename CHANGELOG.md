@@ -14,19 +14,22 @@ Blog posts edits (typos, code snippets, content embeds, etc.) will be included i
 
 ### Added
 
-- Custom start scripts with [`gatsby-cli` flags](https://www.gatsbyjs.org/docs/gatsby-cli/#develop)
-- Portfolio (work section)
+- Portfolio (projects section)
 - Blog post tags to title section
 - Shape specification to component prop type checking
 - Filters via tags on blog and home page
 - Email newsletter subscription form
 - Dark/light theme feature to change based on time of day (light theme during daytime, dark theme during nighttime)
+- Custom start scripts with [`gatsby-cli` flags](https://www.gatsbyjs.org/docs/gatsby-cli/#develop)
+- Self-host fonts with `gatsby-plugin-web-font-loader`
 
 ### Changed
 
 - Update all dependencies
 - React context providers in own directory
 - Blog posts are stored as own directories with images and content together
+- Migrate markdown-remark -> mdxjs
+- Code snippets, remark-prismjs -> remark-vscode
 
 ### Removed
 

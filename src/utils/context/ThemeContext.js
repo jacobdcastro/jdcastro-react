@@ -6,6 +6,7 @@ import { ThemeContext } from './index';
 const ThemeContextWrapper = ({ children }) => {
   const [themeState, setThemeState] = useState({
     currentTheme: lightTheme,
+    isLight: true,
     transition: '0.5s',
   });
 
@@ -27,11 +28,13 @@ const ThemeContextWrapper = ({ children }) => {
       setThemeState({
         ...themeState,
         currentTheme: darkTheme,
+        isLight: false,
       });
-    } else if (time > 6 && time < 19) {
+    } else {
       setThemeState({
         ...themeState,
         currentTheme: lightTheme,
+        isLight: true,
       });
     }
   }, []);

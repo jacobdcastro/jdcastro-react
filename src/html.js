@@ -1,37 +1,39 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default class HTML extends React.Component {
-  render() {
-    return (
-      <html lang="en" {...this.props.htmlAttributes}>
-        <head>
-          <meta charSet="utf-8" />
-          <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
-          />
-          {this.props.headComponents}
-        </head>
-        <body {...this.props.bodyAttributes} style={{ overflowX: 'hidden' }}>
-          {this.props.preBodyComponents}
-          <div
-            key={'body'}
-            id="___gatsby"
-            dangerouslySetInnerHTML={{ __html: this.props.body }}
-          />
-          {this.props.postBodyComponents}
-          <noscript>
-            Umm, sorry. But my website works best when you have Javascript
-            turned on. You've got it turned off! Flip the switch for the best
-            experience. - Jacob D. Castro
-          </noscript>
-        </body>
-      </html>
-    );
-  }
-}
+const HTML = props => {
+  return (
+    <html lang="en" {...props.htmlAttributes}>
+      <head>
+        <meta charSet="utf-8" />
+        <meta httpEquiv="x-ua-compatible" content="ie=edge" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <link type="text/css" rel="stylesheet" href="fonts/fonts.css" />
+        {props.headComponents}
+      </head>
+
+      <body {...props.bodyAttributes} style={{ overflowX: 'hidden' }}>
+        <noscript>
+          Umm, sorry. But my website works best when you have Javascript turned
+          on. You've got it turned off! Flip the switch for the best experience.
+          - Jacob D. Castro
+        </noscript>
+        {props.preBodyComponents}
+        <div
+          key={'body'}
+          id="___gatsby"
+          dangerouslySetInnerHTML={{ __html: props.body }}
+        />
+        {props.postBodyComponents}
+      </body>
+    </html>
+  );
+};
+
+export default HTML;
 
 HTML.propTypes = {
   htmlAttributes: PropTypes.object,

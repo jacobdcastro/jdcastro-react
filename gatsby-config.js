@@ -6,7 +6,7 @@ module.exports = {
     siteUrl: 'https://jacobdcastro.com',
   },
   pathPrefix: '/blog',
-  // pathPrefix: '/projects',
+  pathPrefix: '/projects',
   plugins: [
     'gatsby-plugin-sitemap',
     'gatsby-plugin-sharp',
@@ -25,35 +25,24 @@ module.exports = {
             resolve: 'gatsby-remark-images',
             options: {
               maxWidth: 800,
+              quality: 100,
             },
           },
           {
-            resolve: 'gatsby-remark-prismjs',
+            resolve: 'gatsby-remark-vscode',
             options: {
-              classPrefix: 'language-',
-              inlineCodeMarker: null,
-              aliases: {},
-              showLineNumbers: false,
-              noInlineHighlight: false,
-              languageExtensions: [
-                {
-                  language: 'superscript',
-                  extend: 'javascript',
-                  definition: {
-                    superscript_types: /(SuperType)/,
-                  },
-                  insertBefore: {
-                    function: {
-                      superscript_keywords: /(superif|superelse)/,
-                    },
-                  },
-                },
-              ],
-              prompt: {
-                user: 'root',
-                host: 'localhost',
-                global: false,
+              theme: {
+                default: 'Atom One Dark',
+                // parentSelector: {
+                //   '#layoutWrapper[data-theme=light]': 'Atom One Light',
+                //   '#layoutWrapper[data-theme=dark]': 'Atom One Dark',
+                // },
               },
+              extensions: [
+                'vscode-theme-onedark',
+                'vscode-theme-onelight',
+                'vscode-styled-components',
+              ],
             },
           },
         ],
@@ -82,9 +71,17 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
+        name: 'content',
         path: path.join(__dirname, 'content'),
       },
     },
+    // {
+    //   resolve: 'gatsby-source-filesystem',
+    //   options: {
+    //     name: 'fonts',
+    //     path: path.join(__dirname, 'static', 'fonts'),
+    //   },
+    // },
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
@@ -107,6 +104,13 @@ module.exports = {
       resolve: 'gatsby-plugin-typography',
       options: {
         pathToConfigModule: path.join(__dirname, 'src', 'utils', 'typography'),
+        omitGoogleFont: true,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-local-font-loader',
+      options: {
+        pathToStylesheet: path.join(__dirname, 'static', 'fonts', 'fonts.css'),
       },
     },
     {

@@ -53,7 +53,7 @@ Once installed, let's open up `src/App.js` where all of the app code is.
 
 <!-- App.js -->
 
-```javascript{numberLines: true}
+```jsx{numberLines: true}
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
@@ -98,7 +98,7 @@ const Wrapper = styled.div``;
 
 All of our styles will go inside the backticks. So let's copy those from `App.css` and paste it all in the new component we created. Once the styles are in the Wrapper component, we'll _slap_ it in our JSX by replacing the `div` tags with the newly created `Wrapper` component. Then remove the `./App.css` import statement and delete the CSS file entirely!
 
-```javascript
+```jsx
 import React from "react";
 import logo from "./logo.svg";
 import styled from "styled-components";
@@ -183,7 +183,7 @@ With that said, here's a quick summary of what's going down.
 
 In JSX, create a `<button>Toggle theme</button>` just below the 'Learn React' link. Then we'll add basic styles in the `<Wrapper>` component. Feel free to copy the styles in.
 
-```javascript
+```jsx
 import React from "react";
 import logo from "./logo.svg";
 import styled from "styled-components";
@@ -324,7 +324,7 @@ Once `<ThemeProvider>` recieves the theme prop, it will _provide_ ALL child styl
 
 So let's wrap all of our JSX in `<ThemeProvider>` and set the theme to `darkTheme` which we've already imported.
 
-```javascript
+```jsx
 function App() {
   return (
     <ThemeProvider theme={darkTheme}>
@@ -369,7 +369,6 @@ On line 18, let's set the background color to the `bgColor` value set in our `da
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
 ```
 
 So where do we get `props.theme.bgColor`?
@@ -465,7 +464,7 @@ Then, just above the App component's return statement on line 62, let's add the 
 
 It'll be a simple boolean called `isDarkTheme`, with a default state of true. Toggling it to false will enable the light theme.
 
-```javascript
+```jsx
 function App() {
   let [isDarkTheme, toggleTheme] = useState(true);
 
@@ -503,7 +502,7 @@ We'll do so with a ternerary operator. So if `isDarkTheme` is true, then it will
 
 So edit line 65 like so:
 
-```javascript
+```jsx
 <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
 ```
 
@@ -523,7 +522,7 @@ If we were to put `toggleTheme` right in the button tag, React would get stuck i
 
 So we'll create an `action` function just above the return statement, and then add the action to the onClick attribute like so:
 
-```javascript
+```jsx
 function App() {
   let [isDarkTheme, toggleTheme] = useState(true);
 
