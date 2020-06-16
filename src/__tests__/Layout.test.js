@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, cleanup, fireEvent } from '@testing-library/react';
 import ThemeContextWrapper, { ThemeContext } from '../utils/ThemeContext';
-import Layout from '../templates/Layout';
+import Layout from '../components/layout';
 import { ThemeProvider } from 'styled-components';
 import ThemeToggleBtn from '../components/layout/ThemeToggleBtn';
 import 'jest-styled-components';

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
-import Layout from '../templates/layout';
+import Layout from '../components/layout';
 
 const NotFoundWrapper = styled.div`
   /* text-align: center; */

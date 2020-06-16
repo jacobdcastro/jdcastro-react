@@ -1,14 +1,14 @@
 import React, { useContext, useState, useEffect } from 'react';
-import { ThemeContext } from '../utils/context';
+import { ThemeContext } from '../../utils/context';
 import { ThemeProvider } from 'styled-components';
-import Head from '../utils/Helmet';
+import SEO from './SEO';
 import PropTypes from 'prop-types';
 
-import { LayoutWrapper } from '../styles/layout/LayoutStyles';
-import Header from '../components/layout/Header';
-import ThemeToggleBtn from '../components/layout/ThemeToggleBtn';
-import Footer from '../components/layout/Footer';
-import MobileNav from '../components/layout/MobileNav';
+import { LayoutWrapper } from '../../styles/layout/LayoutStyles';
+import Header from './Header';
+import ThemeToggleBtn from './ThemeToggleBtn';
+import Footer from './Footer';
+import MobileNav from './MobileNav';
 
 const Layout = ({ children, path, seo }) => {
   // subscribes to value from ../utils/ThemeContext.js and
@@ -33,7 +33,7 @@ const Layout = ({ children, path, seo }) => {
   return (
     <ThemeProvider theme={currentTheme}>
       <LayoutWrapper id="layoutWrapper" data-theme={isLight ? 'light' : 'dark'}>
-        <Head seo={seo} />
+        <SEO seo={seo} />
         <div style={{ position: 'absolute', top: '0', zIndex: '1' }}>
           <Header />
           <MobileNav

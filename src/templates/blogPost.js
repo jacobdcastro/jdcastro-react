@@ -1,5 +1,5 @@
 import React from 'react';
-import Layout from './layout';
+import Layout from '../components/layout';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
@@ -11,9 +11,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 // TODO add next and previous post links (from context)
 
-const blogPost = props => {
-  console.log(props);
-  const { path, data } = props;
+const blogPost = ({ path, data }) => {
   const {
     title,
     subtitle,

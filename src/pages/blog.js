@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 // import Moment from 'react-moment';
-import Layout from '../templates/layout';
+import Layout from '../components/layout';
 import BlogPageWrapper from '../styles/blog/BlogPageStyles';
 import BlogListing from '../components/index/BlogListing';
 

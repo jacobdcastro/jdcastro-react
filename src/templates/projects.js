@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
-import Layout from '../templates/layout';
+import Layout from '../components/layout';
 import ProjectListing from '../components/projects/ProjectListing';
 import ProjectsPageWrapper from '../styles/projects/ProjectsPageStyles';
 

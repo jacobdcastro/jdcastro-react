@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
-import Layout from '../templates/layout';
+import Layout from '../components/layout';
 import ContactWrapper from '../styles/contact/ContactStyles';
 
 const FormSuccess = ({ path }) => {
