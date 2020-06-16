@@ -9,6 +9,7 @@ Blog posts edits (typos, code snippets, content embeds, etc.) will be included i
 - "Talks" page featuring past/future public speaking gigs
 - Netlify functions for contact form
 - Jest tests
+- gatsby-plugin-local-font-loader
 
 ## [3.0.0] - 2020-01-23
 

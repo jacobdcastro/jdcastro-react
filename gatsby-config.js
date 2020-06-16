@@ -110,7 +110,11 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-local-font-loader',
       options: {
-        pathToStylesheet: path.join(__dirname, 'static', 'fonts', 'fonts.css'),
+        pathsToFiles: [
+          path.join(__dirname, 'static', 'fonts', 'JetBrainsMono'),
+          path.join(__dirname, 'static', 'fonts', 'Montserrat'),
+          path.join(__dirname, 'static', 'fonts', 'OpenSans'),
+        ],
       },
     },
     {

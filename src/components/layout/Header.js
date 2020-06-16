@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import LogoSVG from '../../images/svg/SignatureLogoSVG'; // inline svg component
 import { HeaderWrapper } from '../../styles/layout/HeaderStyles';
 import useScrollListener from '../../utils/hooks/useScrollListener';
-// import '../../styles/layout/hamburgers.css';
+import '../../styles/layout/hamburgers.css';
 
 const Header = () => {
   // custom hook listens to scroll values,
