@@ -1,11 +1,11 @@
 [build]
   publish = "public/"
   command = "gatsby build"
-  functions = "./functions"
+  functions = "functions/"
 
 [dev]
   command = "npm start"
-  functions = "./functions"
+  functions = "functions/"
   framework = "#custom"
   port = 14141 
   targetPort = 1414
