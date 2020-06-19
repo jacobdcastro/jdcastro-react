@@ -81,6 +81,7 @@
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-react": "^7.20.0",
     "eslint-plugin-styled-components": "0.0.0",
+    "gatsby-cli": "^2.12.46",
     "gatsby-plugin-eslint": "^2.0.8",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.9.0",
