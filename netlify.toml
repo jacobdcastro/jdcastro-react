@@ -6,3 +6,7 @@
 [dev]
   command = "npm start"
   functions = "./functions"
+  framework = "#custom"
+  port = 14141 
+  targetPort = 1414
+  publish = "public/"
