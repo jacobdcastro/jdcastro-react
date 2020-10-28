@@ -11,7 +11,7 @@ const BlogListWrapper = styled.div`
 
     h2 {
       margin: 10px 0 10px;
-      font-size: 1.8rem;
+      font-size: 2rem;
     }
     h3 {
       font-size: 1rem;
@@ -41,6 +41,7 @@ const BlogListWrapper = styled.div`
     }
 
     p {
+      font-size: 1.4rem;
       margin-bottom: 11px;
     }
 
@@ -55,12 +56,8 @@ const BlogListWrapper = styled.div`
       padding: 8px;
       background-color: ${props => props.theme.accentColor};
       transition: 0.3s;
-
-      p {
-        background-color: rgba(0, 0, 0, 0);
-        color: ${props => props.theme.bgColor};
-        margin: 0;
-      }
+      color: ${props => props.theme.bgColor};
+      font-size: 1.1rem;
 
       .rightArrow {
         height: 18px;

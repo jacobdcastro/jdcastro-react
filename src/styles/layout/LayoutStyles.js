@@ -28,8 +28,8 @@ const LayoutWrapper = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    bottom: 20px;
-    right: 20px;
+    bottom: 30px;
+    right: 30px;
     height: 55px;
     width: 55px;
     border: none;

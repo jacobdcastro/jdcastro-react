@@ -3,10 +3,10 @@ import { lightTheme } from '../../styles/layout/__themes';
 
 const HeaderWrapper = styled.header`
   position: fixed;
-  z-index: 5;
+  z-index: 10;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 70px;
   background-color: ${props => props.theme.bgColor};
   background: ${props => {
@@ -52,18 +52,24 @@ const HeaderWrapper = styled.header`
     #logo {
       width: 165px;
       height: auto;
+      background-color: transparent;
+
       .headerLogoSVG {
         transition: ${props => props.theme.transition};
         fill: ${props => props.theme.textColor};
+        background-color: transparent;
         width: 100%;
       }
 
       a {
+        background-color: transparent;
         text-decoration: none;
         outline: none;
       }
 
-      h2 {
+      span {
+        font-family: 'Montserrat', 'Helvetica', sans-serif;
+        display: block;
         color: ${props => props.theme.textColor};
         font-size: 0.563rem;
         text-align: center;
@@ -85,6 +91,7 @@ const HeaderWrapper = styled.header`
         li {
           margin: 0;
           list-style-type: none;
+          background-color: transparent;
 
           a {
             font-family: 'Montserrat', 'Helvetica', 'sans-serif';
@@ -129,7 +136,7 @@ const HeaderWrapper = styled.header`
           width: 100%;
         }
 
-        h2 {
+        span {
           font-size: 0.69rem;
           letter-spacing: 5.8px;
         }

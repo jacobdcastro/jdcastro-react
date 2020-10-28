@@ -1,8 +1,8 @@
 // These objects are imported in ThemeContext.js to be
 // loaded to <ThemeContextWrapper> in gatsby-browser.js && gatsby-ssr.js
 
-// Theme is determined via state in ____________ and
-// switched via a button on every page in site.
+// Theme is determined via state in /utils/context/ThemeContext.js and
+// switched via a button rendered in /components/layout
 const lightTheme = {
   transition: '0.37s',
   bgColor: '#f9f9f9',

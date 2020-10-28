@@ -80,7 +80,9 @@ const blogPost = ({ path, data }) => {
           title={imageTitle}
         />
 
-        <MDXRenderer>{data.mdx.body}</MDXRenderer>
+        <section className="blogContent">
+          <MDXRenderer>{data.mdx.body}</MDXRenderer>
+        </section>
 
         <div className="closing">
           <JDCLogo />

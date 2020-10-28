@@ -15,7 +15,10 @@ const HTML = props => {
         {props.headComponents}
       </head>
 
-      <body {...props.bodyAttributes} style={{ overflowX: 'hidden' }}>
+      <body
+        {...props.bodyAttributes}
+        style={{ overflowX: 'hidden', margin: '0' }}
+      >
         <noscript>
           Umm, sorry. But my website works best when you have Javascript turned
           on. You've got it turned off! Flip the switch for the best experience.

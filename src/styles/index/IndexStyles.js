@@ -15,6 +15,7 @@ const IndexPageWrapper = styled.div`
       animation: ${fadeInUpward} 1s;
       color: ${props => props.theme.textColor};
       letter-spacing: 0.5px;
+      font-size: 2.6rem;
     }
 
     .introSocialLinks {
@@ -23,7 +24,7 @@ const IndexPageWrapper = styled.div`
       justify-content: space-between;
       flex-wrap: wrap;
       animation: ${fadeInUpward} 1s;
-      width: 90vw;
+      width: 70vw;
       max-width: 350px;
       margin: 0;
       li {
@@ -48,6 +49,8 @@ const IndexPageWrapper = styled.div`
   }
 
   .downArrowLink {
+    position: relative;
+    z-index: 1;
     width: 80%;
     margin: -14vh auto 0;
     text-align: center;
@@ -83,7 +86,7 @@ const IndexPageWrapper = styled.div`
 
   @media (min-width: 550px) {
     .indexIntro {
-      h1 {
+      .headline {
         font-size: 2.6rem;
       }
     }
@@ -96,8 +99,8 @@ const IndexPageWrapper = styled.div`
       left: 0px;
       max-width: 1000px;
 
-      h1 {
-        font-size: 3rem;
+      .headline {
+        font-size: 3.8rem;
       }
 
       .introSocialLinks {

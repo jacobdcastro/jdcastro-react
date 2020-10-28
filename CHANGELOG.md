@@ -11,18 +11,16 @@ Blog posts edits (typos, code snippets, content embeds, etc.) will be included i
 - Jest tests
 - gatsby-plugin-local-font-loader
 
-## [3.0.0] - 2020-01-23
+## [3.0.0] - 2020-07-11
 
 ### Added
 
 - Portfolio (projects section)
 - Blog post tags to title section
-- Shape specification to component prop type checking
-- Filters via tags on blog and home page
-- Email newsletter subscription form
 - Dark/light theme feature to change based on time of day (light theme during daytime, dark theme during nighttime)
 - Custom start scripts with [`gatsby-cli` flags](https://www.gatsbyjs.org/docs/gatsby-cli/#develop)
-- Self-host fonts with `gatsby-plugin-web-font-loader`
+- Abstract scroll listener into custom hook (`useScrollListener()`)
+- Self-host fonts w/ `/static/fonts/fonts.css`
 
 ### Changed
 
@@ -31,6 +29,7 @@ Blog posts edits (typos, code snippets, content embeds, etc.) will be included i
 - Blog posts are stored as own directories with images and content together
 - Migrate markdown-remark -> mdxjs
 - Code snippets, remark-prismjs -> remark-vscode
+- Increase paragraph font size
 
 ### Removed
 

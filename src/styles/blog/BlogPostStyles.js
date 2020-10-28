@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
 const BlogPost = styled.article`
-  margin-top: 100px;
+  margin-top: 60px;
   transition: ${props => props.theme.transition};
   background-color: ${props => props.theme.bgColor};
   width: 100%;
 
   .title {
-    font-size: 3rem;
+    font-size: 2.3rem;
     margin-bottom: 14px;
   }
   .subtitle {
@@ -65,6 +65,28 @@ const BlogPost = styled.article`
     }
   }
 
+  .blogContent {
+    h2 {
+      font-size: 2rem;
+      margin: 40px 0 20px;
+    }
+
+    h3 {
+      font-size: 1.7rem;
+      margin: 45px 0 15px;
+    }
+
+    p {
+      line-height: 1.9rem;
+      font-size: 1.25rem;
+    }
+
+    .grvsc-container .grvsc-code .grvsc-line span {
+      font-size: 0.66rem;
+      line-height: 1rem;
+    }
+  }
+
   .closing {
     margin: 40px 60px 0;
     svg {
@@ -79,6 +101,7 @@ const BlogPost = styled.article`
       margin-left: 35px;
     }
   }
+
   @media (max-width: 620px) {
     .author {
       margin-bottom: 10px;
