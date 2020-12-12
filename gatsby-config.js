@@ -38,11 +38,7 @@ module.exports = {
                 //   '#layoutWrapper[data-theme=dark]': 'Atom One Dark',
                 // },
               },
-              extensions: [
-                'vscode-theme-onedark',
-                'vscode-theme-onelight',
-                'vscode-styled-components',
-              ],
+              extensions: ['vscode-theme-onedark', 'vscode-theme-onelight'],
             },
           },
         ],

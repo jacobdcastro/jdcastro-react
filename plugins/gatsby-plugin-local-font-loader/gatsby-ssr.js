@@ -5,8 +5,6 @@ exports.onPreRenderHTML = (
   options
 ) => {
   const headComponents = getHeadComponents();
-  // console.log(headComponents);
-  // console.log({ options });
   headComponents.sort((x, y) => {
     if (x.key === 'TypographyStyle') {
       return -1;
