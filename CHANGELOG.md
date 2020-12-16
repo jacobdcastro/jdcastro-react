@@ -6,12 +6,36 @@ Blog posts edits (typos, code snippets, content embeds, etc.) will be included i
 
 ### [Unreleased]
 
-- Email newsletter subscription form
-- Netlify functions to use with Mailchimp API.
 - "Talks" page featuring past/future public speaking gigs
 - Netlify functions for contact form
-- "Work" page for portfolio
 - Jest tests
+- Convert to TypeScript
+
+### Added
+
+- Portfolio (projects section)
+- Blog post tags to title section
+- Dark/light theme feature to change based on time of day (light theme during daytime, dark theme during nighttime)
+- Custom start scripts with [`gatsby-cli` flags](https://www.gatsbyjs.org/docs/gatsby-cli/#develop)
+- Abstract scroll listener into custom hook (`useScrollListener()`)
+- Self-host fonts w/ `/static/fonts/fonts.css`
+
+### Changed
+
+- Update all dependencies
+- React context providers in own directory
+- Blog posts are stored as own directories with images and content together
+- Migrate markdown-remark -> mdxjs
+- Code snippets, remark-prismjs -> remark-vscode
+- Increase paragraph font size
+
+### Removed
+
+- Tutorials section of site
+
+## [3.0.0] - 2020-07-11
+
+See unreleased for now!
 
 ## [2.3.5] - 2020-01-23
 

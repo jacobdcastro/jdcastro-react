@@ -16,9 +16,10 @@
     }
   ],
   "scripts": {
-    "start": "gatsby develop",
-    "dev": "gatsby develop",
-    "build": "gatsby build",
+    "start": "gatsby develop --port 1414",
+    "dev": "gatsby develop --port 1414 --open",
+    "dev-host": "gatsby develop --port 1414 --host 0.0.0.0 --open",
+    "build": "gatsby build --prefix-paths",
     "format": "prettier --write \"**/*.{js,json,md}\" \"!node_modules/**\" \"!public/**\"",
     "test": "jest --watchAll"
   },
