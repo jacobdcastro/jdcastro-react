@@ -1,17 +1,17 @@
 ---
-slug: "time-to-change-up-my-blog"
-title: "Time to Change Up My Blog"
-subtitle: "The first stack was great to learn, but I've realized something."
-image: "kaleidico-26MJGnCM0Wc-unsplash.jpg"
-imageTitle: "Whiteboard"
-imageAlt: "Two designers writing on whiteboard. Photo by Kaleidico on Unsplash"
-date: "2019-08-14T00:00:00-07:00"
+slug: time-to-change-up-my-blog
+title: Time to Change Up My Blog
+subtitle: The first stack was great to learn, but I've realized something.
+image: kaleidico-26MJGnCM0Wc-unsplash.jpg
+imageTitle: Whiteboard
+imageAlt: Two designers writing on whiteboard. Photo by Kaleidico on Unsplash
+date: 2019-08-14T00:00:00-07:00
 tags:
-  - "gatsby"
-  - "react"
-  - "ui"
-  - "design"
-type: "blogPost"
+  - gatsby
+  - react
+  - ui
+  - design
+type: blogPost
 ---
 
 ## Small Sites Don't Need Much

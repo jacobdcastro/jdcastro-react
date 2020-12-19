@@ -1,16 +1,16 @@
 ---
-slug: "using-netlify-to-launch-my-blog"
-title: "Using Netlify to Launch My Blog"
-subtitle: "I found the best tool of 2018, hands down."
-image: "jason-leung-479251-unsplash.jpg"
-imageTitle: "Confetti Falling"
-imageAlt: "Colorful confetti falling with bright background"
-date: "2019-01-05T00:00:00-07:00"
+slug: using-netlify-to-launch-my-blog
+title: Using Netlify to Launch My Blog
+subtitle: I found the best tool of 2018, hands down.
+image: jason-leung-479251-unsplash.jpg
+imageTitle: Confetti Falling
+imageAlt: Colorful confetti falling with bright background
+date: 2019-01-05T00:00:00-07:00
 tags:
-  - "deployment"
-  - "netlify"
-  - "website"
-type: "blogPost"
+  - deployment
+  - netlify
+  - website
+type: blogPost
 ---
 
 This year, there were a few breakout technologies that shook up the web development world a little bit. One of which was Gatsby.js. I wrote a blog post about my (incredible) experience using it on this blog. Check it out here!

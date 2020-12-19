@@ -1,17 +1,17 @@
 ---
-slug: "this-is-2-0"
-title: "This is 2.0"
-subtitle: "My new website is finally live and I couldn't be more excited."
-image: "new-website-meta-img.jpg"
-imageTitle: "Jacob D. Castro Website Intro"
-imageAlt: "JDCastro logo, twitter, instagram, facebook, github icons with @jacobdcastro username"
-date: "2019-09-23T00:00:00-07:00"
+slug: this-is-2-0
+title: This is 2.0
+subtitle: My new website is finally live and I couldn't be more excited.
+image: new-website-meta-img.jpg
+imageTitle: Jacob D. Castro Website Intro
+imageAlt: JDCastro logo, twitter, instagram, facebook, github icons with @jacobdcastro username
+date: 2019-09-23T00:00:00-07:00
 tags:
-  - "gatsby"
-  - "react"
-  - "ui"
-  - "design"
-type: "blogPost"
+  - gatsby
+  - react
+  - ui
+  - design
+type: blogPost
 ---
 
 ## Website Refresh

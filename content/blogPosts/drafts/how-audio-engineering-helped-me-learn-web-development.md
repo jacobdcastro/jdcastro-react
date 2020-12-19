@@ -1,17 +1,18 @@
 ---
-slug: "how-audio-engineering-helped-me-learn-web-development"
-title: "How Audio Engineering Helped Me Learn Web Development"
-subtitle: "Running cables, testing mics, and adjusting equalizers really helped in my understanding of Javascript."
-image: "kaleidico-26MJGnCM0Wc-unsplash.jpg"
-imageTitle: "Whiteboard"
-imageAlt: "Two designers writing on whiteboard. Photo by Kaleidico on Unsplash"
-date: "2019-10-09T00:00:00-07:00"
+slug: how-audio-engineering-helped-me-learn-web-development
+title: How Audio Engineering Helped Me Learn Web Development
+subtitle:
+  Running cables, testing mics, and adjusting equalizers really helped in my
+  understanding of JavaScript.
+# image: kaleidico-26MJGnCM0Wc-unsplash.jpg
+# imageTitle: Whiteboard
+# imageAlt: Two designers writing on whiteboard. Photo by Kaleidico on Unsplash
+date: 2019-10-09T00:00:00-07:00
 tags:
-  - "frontend"
-  - "development"
-  - "career"
-  - "hobby"
-# type: "blogPost"
+  - frontend
+  - development
+  - career
+  - hobby
 ---
 
 I grew up with a handful of different hobbies and interests.
@@ -42,7 +43,7 @@ So there left me. A 15 year old kid, about a month into doing sound; I'm the onl
 
 I had no idea what I was doing.
 
-So I ended up doing a bunch of self-learning through Youtube videos, playing around with DAW software ([Reason](https://www.reasonstudios.com/) 7 at the time), and spent tons of extra hours at my church to really dial in details with sound and learn their system.
+So I ended up doing a bunch of self-learning through YouTube videos, playing around with DAW software ([Reason](https://www.reasonstudios.com/) 7 at the time), and spent tons of extra hours at my church to really dial in details with sound and learn their system.
 
 Then, about a year later, they announced they would be moving from a dedicated building where the sound system was set up 24/7, to a high school auditorium. This meant we would have to unload a trailer with **all** of our audio equipment, set it up early in the morning, use it for one church service, dismantle the entire system, store it away in said trailer, and repeat. Every single week.
 
@@ -66,7 +67,7 @@ Earlier, I mentioned I am 90% self-taught with my audio skills. I did have an oc
 
 When it came to learning everything else when Ryan wasn't in town, I opted for self-guided learning. It was literally my only option.
 
-Aside from learning all the technical aspects of designing, building, and maintianing a sound system, I learned a super valuable lesson.
+Aside from learning all the technical aspects of designing, building, and maintaining a sound system, I learned a super valuable lesson.
 
 **I learned how to learn.**
 
@@ -84,7 +85,7 @@ I had an interest in STEM subjects. And I thought coding sounded pretty cool. So
 
 It was actually super fun and taught me a lot about programming concepts. But after seeing the future curriculum for the CS degree, it was leading me toward a path I wasn't interested in. I wanted to learn programming for the web, not... data and analytics.
 
-Naturally, I jumped on Google and searched things like "how to learn web development" and "html and css tutorials". It was really no different than having to learn audio engineering, minus the percieved church-wide pressure.
+Naturally, I jumped on Google and searched things like "how to learn web development" and "HTML and CSS tutorials". It was really no different than having to learn audio engineering, minus the perceived church-wide pressure.
 
 I came across an online tech learning platform, [Treehouse](https://teamtreehouse.com/), and began learning frontend web development on the evenings, and in between classes. I would do so in the student computer center, since I didn't have my own laptop, hoping 1 of the 4 Macs were available. One usually was and I had so much fun learning frontend development!
 
@@ -110,7 +111,7 @@ Alright, let's take this step by step.
 
 ### Stage 1. Initial guitar signal
 
-The guitar is the source of sound. It's what is creating the intial electrical signal containing the guitar audio. This initial signal is known as the "dry" signal, since it hasn't been processed yet.
+The guitar is the source of sound. It's what is creating the initial electrical signal containing the guitar audio. This initial signal is known as the "dry" signal, since it hasn't been processed yet.
 
 The cable from an electric guitar is usually plugged into a pedal or two or 15 to process the sound of the guitar to make it sound good. This adds distortion, reverb, delay, and all kinds of other cool effects. You do this by chaining more cables from one pedal to the next, so the electric guitar signal can pass through each pedal individually, getting processed and adjusted along the way.
 
@@ -124,7 +125,7 @@ The sound now coming from the guitar amp is good, but nowhere near loud enough. 
 
 A small microphone stand with a mic is now 2 inches away from the amp speaker listening to the sound. But where does the microphone send the newly captured audio? It sends the signal through the cable that it's connected to! That cable then leads straight backstage where a device called a 'snake' is located.
 
-The snake has inputs for lots of cables, sometimes up to 64, where it can recieve many signals. For convience's sake, the snake combines all signals it recieves into one fat cable that leads straight back to the audio booth. The one snake cable then splits back up into many cable ends that can be plugged individually into the sound board. Each cable has a number assigned to it, and the number of each cable corresponds to a specific plug in the back of the soundboard that is also numbered. Once plugged into the proper plug in the sound board, the technological magic can begin!
+The snake has inputs for lots of cables, sometimes up to 64, where it can receive many signals. For convivence's sake, the snake combines all signals it receives into one fat cable that leads straight back to the audio booth. The one snake cable then splits back up into many cable ends that can be plugged individually into the sound board. Each cable has a number assigned to it, and the number of each cable corresponds to a specific plug in the back of the soundboard that is also numbered. Once plugged into the proper plug in the sound board, the technological magic can begin!
 
 Recap time: guitar => pedal => pedal => pedal => amp => microphone => snake => soundboard.
 
