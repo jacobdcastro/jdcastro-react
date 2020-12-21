@@ -33,7 +33,8 @@
   "dependencies": {
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
-    "gatsby": "^2.26.1",
+    "autoprefixer": "^10.1.0",
+    "gatsby": "^2.29.1",
     "gatsby-image": "^2.8.0",
     "gatsby-plugin-manifest": "^2.9.0",
     "gatsby-plugin-mdx": "^1.7.0",
@@ -45,8 +46,8 @@
     "gatsby-source-filesystem": "^2.8.0",
     "gatsby-transformer-sharp": "^2.9.0",
     "postcss": "^8.2.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
     "tailwindcss": "^2.0.2"
   },
@@ -59,6 +60,7 @@
     "eslint-config-prettier": "^7.1.0",
     "eslint-plugin-react": "^7.21.5",
     "gatsby-plugin-eslint": "^2.0.8",
-    "prettier": "^2.2.1"
+    "prettier": "^2.2.1",
+    "typescript-plugin-css-modules": "^3.0.1"
   }
 }

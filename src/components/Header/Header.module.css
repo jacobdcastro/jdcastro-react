@@ -1,0 +1,7 @@
+.root {
+  @apply p-4 text-center font-bold;
+}
+
+.h1 {
+  @apply text-4xl text-purple-500;
+}

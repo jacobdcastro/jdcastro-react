@@ -1,9 +1,10 @@
 import React, { FC } from 'react'
+import Header from '../components/Header/Header'
 
 const HomePage: FC = () => {
   return (
     <div>
-      <h1>Hello World!</h1>
+      <Header />
     </div>
   )
 }
