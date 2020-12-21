@@ -9,6 +9,7 @@ module.exports = {
     'gatsby-plugin-sitemap',
     'gatsby-plugin-offline',
     'gatsby-plugin-mdx',
+    'gatsby-plugin-postcss',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
