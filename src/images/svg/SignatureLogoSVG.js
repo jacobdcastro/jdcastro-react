@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 // ? fill color set in ../../styles/HeaderStyles.js with
 // ? .headerLogoSVG class
@@ -22,7 +22,7 @@ const LogoSVG = () => {
         transform="translate(-45.21 -249.32)"
       />
     </svg>
-  );
-};
+  )
+}
 
-export default LogoSVG;
+export default LogoSVG

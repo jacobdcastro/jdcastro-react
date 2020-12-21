@@ -1,10 +1,10 @@
-const axios = require('axios');
-const md5 = require('md5');
+const axios = require('axios')
+const md5 = require('md5')
 
 // TODO finish all steps for new subscribers
 
 exports.handler = (event, context, callback) => {
-  const formData = JSON.parse(event.body);
+  const formData = JSON.parse(event.body)
 
   // 1. check to see if user is already subscribed
   //    to Jacob D. Castro Newsletter list
@@ -25,16 +25,16 @@ exports.handler = (event, context, callback) => {
       callback(null, {
         statusCode: 204,
         body: 'Email already subscribed',
-      });
+      })
     })
     .catch(err => {
       // 3. if user is not subscribed, add email, then respond with 'success' message
       if (err.response.data.status === 404) {
-        addNewSub(formData);
+        addNewSub(formData)
       } else {
-        console.log(err);
+        console.log(err)
       }
-    });
+    })
 
   const addNewSub = ({ firstName, email }) => {
     const reqBody = {
@@ -43,7 +43,7 @@ exports.handler = (event, context, callback) => {
       merge_fields: {
         FNAME: firstName,
       },
-    };
+    }
 
     axios({
       method: 'POST',
@@ -60,18 +60,18 @@ exports.handler = (event, context, callback) => {
         callback(null, {
           statusCode: 201,
           body: 'Subscribe success',
-        });
+        })
       })
       .catch(err => {
-        console.log(err);
+        console.log(err)
         callback(null, {
           statusCode: err.response.status,
           body: JSON.stringify(err.response),
-        });
-      });
-  };
+        })
+      })
+  }
 
   // TODO
   // 4. catch error, reply with 'sorry, can you please try again?'
   // 5. if user tries 3 times with error, say 'please come back tomorrow!'
-};
+}

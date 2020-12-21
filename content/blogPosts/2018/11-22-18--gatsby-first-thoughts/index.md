@@ -49,12 +49,12 @@ I started by making the blog home page and that was pretty simple and straight f
 I started by following along with a tutorial on YouTube explaining how to use Contentful with Gatsby. After that tutorial, I really began to understand Gatsby. This is what I finished in my `gatsby-node.js` file:
 
 ```javascript
-const path = require("path");
+const path = require("path")
 
 exports.createPages = ({ graphql, actions }) => {
-  const { createPage } = actions;
+  const { createPage } = actions
   return new Promise((resolve, reject) => {
-    const blogPostTemplate = path.resolve("src/templates/BlogPost.js");
+    const blogPostTemplate = path.resolve("src/templates/BlogPost.js")
     resolve(
       graphql(`
         {
@@ -69,7 +69,7 @@ exports.createPages = ({ graphql, actions }) => {
         }
       `).then(result => {
         if (result.errors) {
-          reject(result.errors);
+          reject(result.errors)
         }
 
         result.data.allContentfulBlogPost.edges.forEach(edge => {
@@ -79,14 +79,14 @@ exports.createPages = ({ graphql, actions }) => {
             context: {
               slug: edge.node.slug,
             },
-          });
-        });
+          })
+        })
 
-        return;
+        return
       })
-    );
-  });
-};
+    )
+  })
+}
 ```
 
 Creating the pages is super easy with the `createPages` Gatsby API. Not to mention, Contentful can automatically generate a slug for the URL. On my project, I have the slugs set to be the title of the blog post. For example, a blog post titled "Hello World In JavaScript" would have its own page at jacobdcastro.com/blog/hello-world-in-javascript/. These tools make it so easy!
@@ -143,7 +143,7 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`
 ```
 
 When I receive the customized object from the query, I basically just stick the content in all of the appropriate places. It's really easy to be honest. Gatsby makes GraphQL wildly effortless.

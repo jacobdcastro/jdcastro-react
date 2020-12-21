@@ -93,15 +93,15 @@ import styled from 'styled-components';
 Just above the App component and below the `./App.css` import, lets make an empty styled `div` component. This will be the wrapper, replacing the current div that has the "App" class on it on line 8. We'll call the styled component `Wrapper`.
 
 ```javascript
-const Wrapper = styled.div``;
+const Wrapper = styled.div``
 ```
 
 All of our styles will go inside the backticks. So let's copy those from `App.css` and paste it all in the new component we created. Once the styles are in the Wrapper component, we'll _slap_ it in our JSX by replacing the `div` tags with the newly created `Wrapper` component. Then remove the `./App.css` import statement and delete the CSS file entirely!
 
 ```jsx
-import React from "react";
-import logo from "./logo.svg";
-import styled from "styled-components";
+import React from "react"
+import logo from "./logo.svg"
+import styled from "styled-components"
 
 const Wrapper = styled.div`
   .App {
@@ -137,7 +137,7 @@ const Wrapper = styled.div`
       transform: rotate(360deg);
     }
   }
-`;
+`
 
 function App() {
   return (
@@ -157,10 +157,10 @@ function App() {
         </a>
       </header>
     </Wrapper>
-  );
+  )
 }
 
-export default App;
+export default App
 ```
 
 Now, styled-components is officially styling the app! If you check localhost:3000/ in your browser, there should be no changes to the webpage whatsoever.
@@ -184,9 +184,9 @@ With that said, here's a quick summary of what's going down.
 In JSX, create a `<button>Toggle theme</button>` just below the 'Learn React' link. Then we'll add basic styles in the `<Wrapper>` component. Feel free to copy the styles in.
 
 ```jsx
-import React from "react";
-import logo from "./logo.svg";
-import styled from "styled-components";
+import React from "react"
+import logo from "./logo.svg"
+import styled from "styled-components"
 
 const Wrapper = styled.div`
   .App {
@@ -241,7 +241,7 @@ const Wrapper = styled.div`
       transform: rotate(360deg);
     }
   }
-`;
+`
 
 function App() {
   return (
@@ -262,10 +262,10 @@ function App() {
         <button>LIGHT THEME</button>
       </header>
     </Wrapper>
-  );
+  )
 }
 
-export default App;
+export default App
 ```
 
 Note: The button says "light theme" because the theme is currently dark. The button text will be dynamic to change depending on which theme is active.
@@ -279,11 +279,11 @@ Now that the button is added to the UI, let's write the theme objects! We'll cre
 Next, let's create two empty objects called `darkTheme` and `lightTheme` and export them individually with a named export statement.
 
 ```javascript
-const darkTheme = {};
+const darkTheme = {}
 
-const lightTheme = {};
+const lightTheme = {}
 
-export { darkTheme, lightTheme };
+export { darkTheme, lightTheme }
 ```
 
 Since the default app at localhost:3000/ has a dark background, we'll declare those styles as the dark theme. Copying the same colors in the `.App-header` class in `App.js`, let's set the `darkTheme` object values. While we're at it, we'll set the `lightTheme` object to colors I've decided look pretty cool.
@@ -293,21 +293,21 @@ const darkTheme = {
   bgColor: "#282c34",
   textColor: "white",
   linkColor: "#61dafb",
-};
+}
 
 const lightTheme = {
   bgColor: "#e8ecf0",
   textColor: "#001c38",
   linkColor: "#5dd2f2",
-};
+}
 
-export { darkTheme, lightTheme };
+export { darkTheme, lightTheme }
 ```
 
 Next, we'll import these two themes into `App.js` under the `styled` import on line 4 like so:
 
 ```javascript
-import { darkTheme, lightTheme } from "./themes";
+import { darkTheme, lightTheme } from "./themes"
 ```
 
 ### Using ThemeProvider
@@ -315,7 +315,7 @@ import { darkTheme, lightTheme } from "./themes";
 Once imported, we'll use the `<ThemeProvider>` component that comes with the styled-components library. Edit line 3 to import `ThemeProvider` like this:
 
 ```javascript
-import styled, { ThemeProvider } from "styled-components";
+import styled, { ThemeProvider } from "styled-components"
 ```
 
 ThemeProvider does what it's name implies. You wrap your entire app with the component, and give it a "theme" prop. The theme prop will have a value of whatever theme (object) you set it to.
@@ -346,7 +346,7 @@ function App() {
         </header>
       </Wrapper>
     </ThemeProvider>
-  );
+  )
 }
 ```
 
@@ -433,7 +433,7 @@ const Wrapper = styled.div`
       transform: rotate(360deg);
     }
   }
-`;
+`
 ```
 
 It's important to note that semicolons in the CSS go outside of string interpolations! Sometimes, you may want to return a string as a value in the props function. In this case, _don't put the semicolon in the string_. Put it after the closing curly brace. The styled component won't render properly if the semicolon is in the string.
@@ -457,7 +457,7 @@ But if you'd like to follow along, let's jump in!
 Since we're using React's new `useState()` hook, we need to import it from React on line 1.
 
 ```javascript
-import React, { useState } from "react";
+import React, { useState } from "react"
 ```
 
 Then, just above the App component's return statement on line 62, let's add the state!
@@ -466,7 +466,7 @@ It'll be a simple boolean called `isDarkTheme`, with a default state of true. To
 
 ```jsx
 function App() {
-  let [isDarkTheme, toggleTheme] = useState(true);
+  let [isDarkTheme, toggleTheme] = useState(true)
 
   return (
     <ThemeProvider theme={lightTheme}>
@@ -488,7 +488,7 @@ function App() {
         </header>
       </Wrapper>
     </ThemeProvider>
-  );
+  )
 }
 ```
 
@@ -524,11 +524,11 @@ So we'll create an `action` function just above the return statement, and then a
 
 ```jsx
 function App() {
-  let [isDarkTheme, toggleTheme] = useState(true);
+  let [isDarkTheme, toggleTheme] = useState(true)
 
   const action = () => {
-    toggleTheme((isDarkTheme = !isDarkTheme));
-  };
+    toggleTheme((isDarkTheme = !isDarkTheme))
+  }
 
   return (
     <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
@@ -550,7 +550,7 @@ function App() {
         </header>
       </Wrapper>
     </ThemeProvider>
-  );
+  )
 }
 ```
 

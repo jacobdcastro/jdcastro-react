@@ -22,7 +22,7 @@ module.exports = {
         theme_color: '#7048e8',
         lang: 'en',
         display: 'standalone',
-        icon: './src/images/favicon.png', 
+        icon: './src/images/favicon.png',
       },
     },
     {
@@ -42,4 +42,4 @@ module.exports = {
       __key: 'pages',
     },
   ],
-};
+}

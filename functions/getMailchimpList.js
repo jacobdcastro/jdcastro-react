@@ -1,4 +1,4 @@
-const axios = require('axios');
+const axios = require('axios')
 // const md5 = require('blueimp-md5');
 
 exports.handler = (event, context, callback) => {
@@ -16,9 +16,9 @@ exports.handler = (event, context, callback) => {
       callback(null, {
         statusCode: 200,
         body: JSON.stringify(data),
-      });
+      })
     })
     .catch(err => {
-      console.log(err);
-    });
-};
+      console.log(err)
+    })
+}

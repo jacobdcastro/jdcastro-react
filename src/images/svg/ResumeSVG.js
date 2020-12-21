@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const Resume = () => {
   return (
@@ -36,7 +36,7 @@ const Resume = () => {
       <g></g>
       <g></g>
     </svg>
-  );
-};
+  )
+}
 
-export default Resume;
+export default Resume

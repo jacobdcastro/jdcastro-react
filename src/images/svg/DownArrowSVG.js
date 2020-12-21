@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const Arrow = () => {
   return (
@@ -34,7 +34,7 @@ const Arrow = () => {
       <g></g>
       <g></g>
     </svg>
-  );
-};
+  )
+}
 
-export default Arrow;
+export default Arrow

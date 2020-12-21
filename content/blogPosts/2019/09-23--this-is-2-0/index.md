@@ -74,8 +74,8 @@ The new internal CMS is the biggest codebase change, no doubt. But next refreshi
 From the first create-react-app version, I've used [styled-components](https://styled-components.com) for CSS-in-JS. Originally, my component file looked something like this:
 
 ```javascript
-import React from "react";
-import styled from "styled-compnoents";
+import React from "react"
+import styled from "styled-compnoents"
 
 const MyComponentStyles = styled.div`
   /* TONS OF DAMN STYLES */
@@ -87,15 +87,15 @@ const MyComponentStyles = styled.div`
   /* ..... */
   /* ..... */
   /* Okay finally done */
-`;
+`
 
 const MyComponent = () => (
   <MyComponentStyles>
     <h1>Hello, World!</h1>
   </MyComponentStyles>
-);
+)
 
-export default MyComponent;
+export default MyComponent
 ```
 
 Opening a file to simply edit some JSX presented a 5-second-plus-long scroll party to get past lines of CSS. It was annoying, but I did it to myself.

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const RightArrowSVG = () => {
   return (
@@ -34,7 +34,7 @@ const RightArrowSVG = () => {
       <g></g>
       <g></g>
     </svg>
-  );
-};
+  )
+}
 
-export default RightArrowSVG;
+export default RightArrowSVG

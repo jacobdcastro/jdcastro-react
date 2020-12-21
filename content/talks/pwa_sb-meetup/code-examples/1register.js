@@ -8,13 +8,13 @@ if ('serviceWorker' in navigator) {
         console.log(
           'Service Worker registration completed with scope: ',
           registration.scope
-        );
+        )
       },
       err => {
-        console.log('Service Worker registration failed', err);
+        console.log('Service Worker registration failed', err)
       }
-    );
-  });
+    )
+  })
 } else {
-  console.log('Service Workers not supported');
+  console.log('Service Workers not supported')
 }

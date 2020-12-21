@@ -7,5 +7,5 @@ self.addEventListener('install', event => {
   // cache the family guy gif
   event.waitUntil(
     caches.open('static-v1').then(cache => cache.add('/pwa-steroid.gif'))
-  );
-});
+  )
+})

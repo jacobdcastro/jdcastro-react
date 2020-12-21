@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const Twitter = () => {
   return (
@@ -41,7 +41,7 @@ const Twitter = () => {
       <g></g>
       <g></g>
     </svg>
-  );
-};
+  )
+}
 
-export default Twitter;
+export default Twitter
