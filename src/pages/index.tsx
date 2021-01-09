@@ -1,10 +1,12 @@
 import React, { FC } from 'react'
-import Header from '../components/Header/Header'
+import Navbar from '../components/layout/Navbar/Navbar'
+import Hero from '../components/Hero'
 
 const HomePage: FC = () => {
   return (
     <div>
-      <Header />
+      <Navbar />
+      <Hero />
     </div>
   )
 }
