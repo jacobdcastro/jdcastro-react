@@ -1,0 +1,7 @@
+.root {
+  @apply flex flex-row justify-between p-4 text-center font-bold;
+}
+
+.logo {
+  @apply relative;
+}

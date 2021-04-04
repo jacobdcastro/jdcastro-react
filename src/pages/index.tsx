@@ -1,14 +1,9 @@
 import React, { FC } from 'react'
-import Navbar from '../components/layout/Navbar/Navbar'
-import Hero from '../components/Hero'
+import { Layout } from '@components/common'
+import Hero from '@components/ui/Hero'
 
 const HomePage: FC = () => {
-  return (
-    <div>
-      <Navbar />
-      <Hero />
-    </div>
-  )
+  return <Layout>{/* <Hero /> */}</Layout>
 }
 
 export default HomePage

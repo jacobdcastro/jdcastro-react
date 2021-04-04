@@ -1,0 +1,15 @@
+.root {
+  @apply relative;
+}
+
+.overlayContainer {
+  @apply fixed h-screen w-screen z-10 p-11 pointer-events-none;
+}
+
+.overlay {
+  @apply h-full w-full border-r-2 border-black pointer-events-none;
+}
+
+.body {
+  @apply relative;
+}

@@ -1,5 +1,10 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": ["src/components/*"],
+      "@images/*": ["src/images/*"]
+    },
     "module": "commonjs",
     "target": "esnext",
     "jsx": "preserve",

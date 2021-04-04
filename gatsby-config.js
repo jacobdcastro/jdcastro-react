@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = {
   siteMetadata: {
     title: 'Jacob D. Castro',
@@ -22,14 +24,14 @@ module.exports = {
         theme_color: '#7048e8',
         lang: 'en',
         display: 'standalone',
-        icon: './src/images/favicon.png',
+        icon: path.resolve(__dirname, 'src', 'images', 'favicon.png'),
       },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'images',
-        path: './src/images/',
+        path: path.resolve(__dirname, 'src', 'images'),
       },
       __key: 'images',
     },
@@ -37,9 +39,19 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'pages',
-        path: './src/pages/',
+        path: path.resolve(__dirname, 'src', 'pages'),
       },
       __key: 'pages',
+    },
+    {
+      resolve: 'gatsby-plugin-alias-imports',
+      options: {
+        alias: {
+          '@components': path.resolve(__dirname, 'src/components'),
+          '@images': path.resolve(__dirname, 'src/images'),
+        },
+        extensions: ['tsx', 'ts', 'css', 'md', 'mdx', 'js', 'svg', 'png'],
+      },
     },
   ],
 }
