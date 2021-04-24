@@ -1,37 +1,31 @@
-const path = require('path')
-
 module.exports = {
   siteMetadata: {
-    title: 'Jacob D. Castro',
-    siteUrl: 'https://jacobdcastro.com',
+    title: 'jdc-personal-site',
   },
-  pathPrefix: '/blog',
   plugins: [
+    'gatsby-plugin-image',
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: '========helloworld========',
+      },
+    },
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sitemap',
-    'gatsby-plugin-offline',
-    'gatsby-plugin-mdx',
-    'gatsby-plugin-postcss',
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'Jacob D. Castro',
-        short_name: 'JDCastro',
-        start_url: '/',
-        background_color: '#000000',
-        theme_color: '#7048e8',
-        lang: 'en',
-        display: 'standalone',
-        icon: path.resolve(__dirname, 'src', 'images', 'favicon.png'),
+        icon: 'src/images/icon.png',
       },
     },
+    'gatsby-plugin-mdx',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'images',
-        path: path.resolve(__dirname, 'src', 'images'),
+        path: './src/images/',
       },
       __key: 'images',
     },
@@ -39,19 +33,9 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'pages',
-        path: path.resolve(__dirname, 'src', 'pages'),
+        path: './src/pages/',
       },
       __key: 'pages',
-    },
-    {
-      resolve: 'gatsby-plugin-alias-imports',
-      options: {
-        alias: {
-          '@components': path.resolve(__dirname, 'src/components'),
-          '@images': path.resolve(__dirname, 'src/images'),
-        },
-        extensions: ['tsx', 'ts', 'css', 'md', 'mdx', 'js', 'svg', 'png'],
-      },
     },
   ],
 }

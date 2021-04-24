@@ -1,7 +1,0 @@
-.root {
-  @apply relative flex;
-}
-
-.button {
-  @apply absolute h-10 w-10 bg-purple-700
-}
