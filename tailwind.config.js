@@ -3,7 +3,7 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     fontFamily: {
-      sans: ['Sofia Pro', 'Arial', 'sans-serif'],
+      sans: ['Manrope', 'Sofia Pro', 'Arial', 'sans-serif'],
     },
     extend: {},
   },

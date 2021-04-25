@@ -1,7 +1,11 @@
+const path = require('path')
+
 module.exports = {
   siteMetadata: {
-    title: 'jdc-personal-site',
+    title: 'Jacob D. Castro - Developer',
+    siteUrl: 'https://jdc.dev/',
   },
+  pathPrefix: '/blog',
   plugins: [
     'gatsby-plugin-image',
     {
@@ -15,7 +19,14 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        icon: 'src/images/icon.png',
+        name: 'Jacob D. Castro',
+        short_name: 'JDCastro',
+        start_url: '/',
+        background_color: '#000000',
+        theme_color: '#7048e8',
+        lang: 'en',
+        display: 'standalone',
+        icon: path.resolve(__dirname, 'src', 'images', 'favicon.png'),
       },
     },
     'gatsby-plugin-mdx',
@@ -25,7 +36,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'images',
-        path: './src/images/',
+        path: path.resolve(__dirname, 'src', 'images'),
       },
       __key: 'images',
     },
@@ -33,9 +44,37 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'pages',
-        path: './src/pages/',
+        path: path.resolve(__dirname, 'src', 'pages'),
       },
       __key: 'pages',
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'blogPosts',
+        path: path.resolve(__dirname, 'content', 'blogPosts'),
+      },
+      __key: 'posts',
+    },
+    {
+      resolve: 'gatsby-plugin-alias-imports',
+      options: {
+        alias: {
+          '@components': path.resolve(__dirname, 'src', 'components'),
+          '@images': path.resolve(__dirname, 'src', 'images'),
+        },
+        extensions: [
+          'js',
+          'ts',
+          'tsx',
+          'css',
+          'md',
+          'mdx',
+          'svg',
+          'png',
+          'json',
+        ],
+      },
     },
   ],
 }

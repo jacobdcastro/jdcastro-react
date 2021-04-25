@@ -2,3 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 @tailwind screens;
+
+@layer base {
+  @font-face {
+    font-family: Manrope;
+    font-weight: 400;
+    src: url(/fonts/manrope/Manrope-Regular.otf) format('otf');
+  }
+
+  @font-face {
+    font-family: Manrope;
+    font-weight: 500;
+    src: url(/fonts/manrope/Manrope-SemiBold.otf) format('otf');
+  }
+
+  @font-face {
+    font-family: Manrope;
+    font-weight: 600;
+    src: url(/fonts/manrope/Manrope-Bold.otf) format('otf');
+  }
+
+  @font-face {
+    font-family: Manrope;
+    font-weight: 700;
+    src: url(/fonts/manrope/Manrope-ExtraBold.otf) format('otf');
+  }
+}
